@@ -6,7 +6,8 @@
     "stylus": "*",
     "nib": "*",
     "jade": "*",
-    "coffee-script": "1.4.x"
+    "coffee-script": "1.4.x",
+    "forever": "*"
   },
   "engines": {
     "node": "0.10.x",
