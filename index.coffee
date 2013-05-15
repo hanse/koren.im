@@ -23,7 +23,7 @@ app.configure ->
 app.get "/", (req, res) ->
   res.render "index", projects: []
 
-app.listen 4001, ->
+app.listen (process.env.port or 5000), ->
   console.log "up and running"
 
 
