@@ -1,35 +1,32 @@
-doctype 5
+!!! 5
 html
   head
     meta(charset='utf-8')
-    title hanse λ
+    title Hans-Kristian Koren
+
+    // built with love and node.js (express, jade and stylus) 
+      
 
     meta(name='apple-mobile-web-app-capable', content='yes')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700')
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC')
-    link(rel='stylesheet', href='/style.css')
+    link(rel='stylesheet', href='/css/style.css')
   body
     header
-      nav
-        ul
-          li
-            a(href='#') Welcome
-          li
-            a(href='#') Projects
-          li
-            a.contact(href='#') Get in touch
+      h1 Hans-Kristian KΩren
 
     section
       block content
     footer
-      p Get in touch with me 
-        a(href='http://linkedin.com/in/hanskristiankoren') somewhere 
-        | on the 
-        a(href='http://github.com/Hanse') internet.
+      p Jeg er å finne 
+        a(href='http://twitter.com/Hanse') ulike
+        | 
+        a(href='http://github.com/Hanse') steder
+        |  på 
+        a(href='http://linkedin.com/in/hanskristiankoren') nettet
+        | .
+      p I tillegg kan jeg nås på <a href="">e-post</a>.
 
-
+    script(src='/js/projects.js')
     script
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
