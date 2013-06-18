@@ -1,0 +1,70 @@
+@import "nib/reset"
+@import "nib/vendor"
+
+global-reset()
+
+backgroundColor = #fff
+
+@font-face
+  font-family VeraMono
+  src url("../VeraMono.ttf")
+
+*
+  box-sizing border-box
+
+body
+  font-smoothing antialiased
+  font-size 16px
+  line-height 1.5
+  margin 0 auto
+  background-color backgroundColor
+  color: #777
+  position relative
+  font-family VeraMono, Menlo, Monaco, "Courier New", monospace
+  position relative
+
+header
+  padding 20px
+  position relative
+
+h1
+  color #D35400
+  font-weight 400
+  max-width 700px
+  margin 0 auto
+  text-align center
+  font-size 56px
+  font-weight 700
+  text-transform uppercase
+  text-shadow 4px 2px 0 #F1C40F
+
+a
+  color #92789f
+  text-decoration none
+
+  &:hover
+    text-decoration underline
+
+section
+  background #f1ede9
+  border-bottom 10px dotted backgroundColor
+  border-top 10px dotted backgroundColor
+  padding 20px 0
+
+h2
+  font 20px "Open Sans"
+  text-transform: uppercase
+  color #333
+  font-weight 700
+  margin-top 20px
+
+footer
+  text-align center
+  color #aaa
+  position relative
+  top 50px
+
+
+@import "projects"
+
+

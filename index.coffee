@@ -11,7 +11,7 @@ app.configure ->
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use stylus.middleware(
-    src: "#{__dirname}/public",
+    src: "#{__dirname}/public/css",
     compile: (str, path) ->
       stylus(str).set("filename", path).set("compress", no).use(nib())
   )
