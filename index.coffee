@@ -10,6 +10,10 @@ app.configure ->
   app.use express.cookieParser()
   app.use express.bodyParser()
   app.use express.methodOverride()
+  app.locals.pretty = yes
+
+app.configure "development", ->
+  app.use express.errorHandler()
   app.use stylus.middleware(
     src: "#{__dirname}/public/css",
     compile: (str, path) ->
@@ -17,13 +21,12 @@ app.configure ->
   )
   
   app.use express.static(__dirname + "/public")
-  app.locals.pretty = yes
-
 
 app.get "/", (req, res) ->
   res.render "index", projects: []
 
-app.listen (process.env.port or 5000), ->
-  console.log "up and running"
+port = process.env.PORT or 5000
+app.listen port, ->
+  console.log "up and running at port #{port}"
 
 
