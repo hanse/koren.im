@@ -7,16 +7,46 @@
     , projects     = container.querySelectorAll("article")
     , currentIndex = 0;
 
-  changeProject();
-
   var bulletContainer = document.createElement("p");
   bulletContainer.className = "bullet-container";
+  container.appendChild(bulletContainer);
+
   for (var i = 0; i < projects.length; ++i) {
     var bullet = document.createElement("span");
     bullet.className = "bullet";
+    bullet.addEventListener("click", bulletClick(i));
     bulletContainer.appendChild(bullet);
   }
-  container.appendChild(bulletContainer);
+
+  function changeProject() {
+
+    var index = -1
+      , max   = projects.length;
+
+    while (++index < max) {
+      projects[index].classList.remove("active");
+      bulletContainer.children[index].classList.remove("active");
+
+      if (index === currentIndex) {
+        projects[index].classList.toggle("active");
+        bulletContainer.children[index].classList.toggle("active");
+        //bulletContainer.childNodes;
+        //[i].classList.toggle("active");
+      }
+    }
+    console.log(currentIndex)
+  }
+
+  function bulletClick(index) {
+    return function() {
+      currentIndex = index;
+      changeProject();
+    };
+  }
+
+  changeProject();
+
+  window.b = bulletContainer;
 
   document.addEventListener("keyup", function(e) {
     switch (e.keyCode) {
@@ -36,12 +66,4 @@
     currentIndex = ++currentIndex % projects.length;
     changeProject();
   });
-
-  function changeProject() {
-    for (var i = 0; i < projects.length; ++i) {
-      projects[i].classList.remove("active");
-      if (i === currentIndex) projects[i].classList.toggle("active");
-    }
-  }
-
 })(window, document);
