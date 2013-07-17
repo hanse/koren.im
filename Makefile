@@ -1,4 +1,4 @@
 server:
-	supervisor index.coffee
+	supervisor index.js
 
 .PHONY: server

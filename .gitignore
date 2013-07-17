@@ -4,3 +4,4 @@ public/style.css
 deploy.sh
 nginx.conf
 init.d.conf
+.env
