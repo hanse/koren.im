@@ -1,8 +1,7 @@
 #work
   height 320px
-  
+
   article
-    //position absolute
     position relative
     top 0
     opacity 0
@@ -13,7 +12,7 @@
     background black
     transition all 1s ease-in-out
 
-    div.container
+    .container
       max-width 720px
       height inherit
       margin 0 auto
@@ -38,7 +37,7 @@
       background #3498DB
       transform rotateY(90deg)
       //transform rotateZ(90deg)
-    
+
     &:nth-child(2)
       background #E74C3C
       transform rotateY(90deg)
@@ -80,14 +79,16 @@
 
 .bullet
   display inline-block
-  height 12px
-  width 12px
+  height 16px
+  width 16px
   background #ddd
   cursor pointer
   margin-right 10px
   transform rotateZ(45deg)
   box-shadow 2px 1px 0 #aaa
+  transition transform 0.5s
 
   &:hover, &.active
-    background #fff
+    transform rotateZ(0)
+    background #eee
 

@@ -174,7 +174,7 @@ footer {
   -ms-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
-#work article div.container {
+#work article .container {
   max-width: 720px;
   height: inherit;
   margin: 0 auto;
@@ -263,8 +263,8 @@ footer {
 }
 .bullet {
   display: inline-block;
-  height: 12px;
-  width: 12px;
+  height: 16px;
+  width: 16px;
   background: #ddd;
   cursor: pointer;
   margin-right: 10px;
@@ -275,8 +275,18 @@ footer {
   transform: rotateZ(45deg);
   -webkit-box-shadow: 2px 1px 0 #aaa;
   box-shadow: 2px 1px 0 #aaa;
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  -ms-transition: -ms-transform 0.5s;
+  transition: transform 0.5s;
 }
 .bullet:hover,
 .bullet.active {
-  background: #fff;
+  -webkit-transform: rotateZ(0);
+  -moz-transform: rotateZ(0);
+  -o-transform: rotateZ(0);
+  -ms-transform: rotateZ(0);
+  transform: rotateZ(0);
+  background: #eee;
 }
