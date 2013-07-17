@@ -7,19 +7,32 @@
     , projects     = container.querySelectorAll("article")
     , currentIndex = 0;
 
-  var bulletContainer = document.createElement("p");
-  bulletContainer.className = "bullet-container";
+  var bulletContainer = createElement("p", {className: "bullet-container"});
   container.appendChild(bulletContainer);
 
-  for (var i = 0; i < projects.length; ++i) {
-    var bullet = document.createElement("span");
-    bullet.className = "bullet";
-    bullet.addEventListener("click", bulletClick(i));
-    bulletContainer.appendChild(bullet);
+  buildNavigationBullets();
+
+  function createElement(tag, attributes) {
+    var el = document.createElement(tag);
+    for (var attr in attributes) {
+      el[attr] = attributes[attr];
+    }
+    return el;
+  }
+
+  function buildNavigationBullets() {
+    var index = -1
+      , max = projects.length;
+
+    while (++index < max) {
+      bulletContainer.appendChild(createElement("span", {
+        className: "bullet",
+        onclick: bulletClick(index)
+      }));
+    }
   }
 
   function changeProject() {
-
     var index = -1
       , max   = projects.length;
 
@@ -30,8 +43,6 @@
       if (index === currentIndex) {
         projects[index].classList.toggle("active");
         bulletContainer.children[index].classList.toggle("active");
-        //bulletContainer.childNodes;
-        //[i].classList.toggle("active");
       }
     }
     console.log(currentIndex)
@@ -45,8 +56,6 @@
   }
 
   changeProject();
-
-  window.b = bulletContainer;
 
   document.addEventListener("keyup", function(e) {
     switch (e.keyCode) {
@@ -66,4 +75,5 @@
     currentIndex = ++currentIndex % projects.length;
     changeProject();
   });
+
 })(window, document);
