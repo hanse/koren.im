@@ -27,7 +27,7 @@ app.configure("development", function() {
 });
 
 app.get("/", function(req, res) {
-  return res.render("index", {projects: []});
+  return res.render("index", {projects: require("./projects.json")});
 });
 
 app.listen(app.get('port'), function() {

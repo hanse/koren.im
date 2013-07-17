@@ -2,47 +2,14 @@ extends layout
 
 block content
   #work.page
-    article
-      div.container
-        div.text
-          h2 workoutsapp.cc
-          p Treningsapp til iOS og web. Lanseres i løpet av sommeren/høsten.
-          p
-            a(href='http://workoutsapp.cc') Besøk &rarr;
-        img(src='/images/workouts.png')
-    
-    article
-      div.container
-        div.text
-          h2 Klovneløpet
-          p Nettside for Klovneløpet &mdash; Et årlig veldedighetsløp arrangert av studenter i Trondheim. Laget i Ruby On Rails.
-          p
-            a(href='http://klovnelopet.com') Besøk &rarr;
-        img(src='/images/klovnelopet.png')
+    each project in projects
+      article
+        div.container
+          div.text
+            h2= project.name
+            p= project.description
+            p
+              a(href='#{project.url}') Besøk &rarr;
 
-    article
-      div.container
-        div.text
-          h2 Faktura
-          p Enkelt fakturaprogram der du fyller inn data og så kan velge mellom å laste ned som PDF eller sende direkte til mottaker (med kopi til deg selv).
-            | Masse HTML5-goodies, så funker kun i utvalgte nettlesere.
-          p
-            a(href='http://faktura.hkri.me') Besøk &rarr;
-        img(src='/images/klovnelopet.png')
+          img(src='#{project.image}')
 
-    article
-      div.container
-        div.text
-          h2 Julekalender
-          p Nettside hvor du kan holde oversikt over alle julekalendere du følger med på. Gå ikke glipp av muligheten til å vinne premier! Laget med RoR og Backbone.
-          p
-            a(href='http://julekalender.hkri.me') Besøk &rarr;
-        img(src='/images/julekalender.png')
-
- 
-    article
-      div.container
-        div.text Hello World
-        img(src='/images/julekalender.png')
-
-    

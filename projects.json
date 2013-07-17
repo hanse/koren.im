@@ -1,0 +1,30 @@
+[
+  {
+    "name": "workoutsapp.cc",
+    "description": "Treningsapp til iOS og web. Kommer snart.",
+    "url": "http://workoutsapp.cc",
+    "image": "/images/workouts.png",
+    "tags": []
+  },
+  {
+    "name": "Klovneløpet",
+    "description": "Nettside for Klovneløpet &mdash; Et årlig veldedighetsløp arrangert av studenter i Trondheim.",
+    "url": "http://klovnelopet.com",
+    "image": "/images/klovnelopet.png",
+    "tags": []
+  },
+  {
+    "name": "Regning",
+    "description": "Enkelt fakturaprogram der du fyller inn data og så kan velge mellom å laste ned som PDF eller sende direkte til mottaker (med kopi til deg selv). Masse HTML5-goodies, så funker kun i utvalgte nettlesere.",
+    "url": "http://regning.hkri.me",
+    "image": "/images/julekalender.png",
+    "tags": []
+  },
+  {
+    "name": "Julekalender",
+    "description": "Nettside hvor du kan holde oversikt over alle julekalendere du følger med på. Gå ikke glipp av muligheten til å vinne premier! Laget med RoR og Backbone.",
+    "url": "http://julekalender.hkri.me",
+    "image": "/images/julekalender.png",
+    "tags": []
+  }
+]
