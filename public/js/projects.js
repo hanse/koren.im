@@ -11,6 +11,7 @@
   container.appendChild(bulletContainer);
 
   buildNavigationBullets();
+  changeProject();
 
   function createElement(tag, attributes) {
     var el = document.createElement(tag);
@@ -45,7 +46,6 @@
         bulletContainer.children[index].classList.toggle("active");
       }
     }
-    console.log(currentIndex)
   }
 
   function bulletClick(index) {
@@ -54,8 +54,6 @@
       changeProject();
     };
   }
-
-  changeProject();
 
   document.addEventListener("keyup", function(e) {
     switch (e.keyCode) {
