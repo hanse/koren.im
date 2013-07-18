@@ -148,7 +148,7 @@ footer {
   text-align: center;
   color: #aaa;
   position: relative;
-  top: 50px;
+  top: 70px;
 }
 #work {
   height: 320px;
@@ -206,12 +206,13 @@ footer {
   transform: rotateY(90deg);
 }
 #work article:nth-child(2) {
-  background: #e74c3c;
+background
   -webkit-transform: rotateY(90deg);
   -moz-transform: rotateY(90deg);
   -o-transform: rotateY(90deg);
   -ms-transform: rotateY(90deg);
   transform: rotateY(90deg);
+  background: #307d81;
 }
 #work article:nth-child(3) {
   background: #34495e;
@@ -222,12 +223,12 @@ footer {
   transform: rotateY(180deg);
 }
 #work article:nth-child(4) {
-  background: #f1c40f;
   -webkit-transform: rotateY(90deg);
   -moz-transform: rotateY(90deg);
   -o-transform: rotateY(90deg);
   -ms-transform: rotateY(90deg);
   transform: rotateY(90deg);
+  background: #730202;
 }
 #work article.active {
   opacity: 1;
@@ -240,6 +241,7 @@ footer {
   -ms-transform: rotateX(0) rotateY(0) rotateZ(0);
   transform: rotateX(0) rotateY(0) rotateZ(0);
   visibility: visible;
+  width: 100%;
 }
 #work h2 {
   font-weight: bold;

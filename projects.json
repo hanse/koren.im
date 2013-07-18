@@ -17,7 +17,7 @@
     "name": "Regning",
     "description": "Enkelt fakturaprogram der du fyller inn data og så kan velge mellom å laste ned som PDF eller sende direkte til mottaker (med kopi til deg selv). Masse HTML5-goodies, så funker kun i utvalgte nettlesere.",
     "url": "http://regning.hkri.me",
-    "image": "/images/julekalender.png",
+    "image": "/images/regning.png",
     "tags": []
   },
   {
