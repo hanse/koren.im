@@ -1,3 +1,3 @@
 # hanskristiankoren.no
 
-My web site [hanskristiankoren.no](hanskristiankoren.no). Check it out.
+My web site [hanskristiankoren.no](http://hanskristiankoren.no). Check it out.
