@@ -10,19 +10,17 @@ app.configure(function() {
   app.use(express.logger("dev"));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  if (app.get('env') == "development") {
-    app.use(stylus.middleware({
-      src: __dirname + "/public",
-      dest: __dirname + "/public",
-      compile: function(str, path) {return stylus(str).set("filename", path).use(nib());}
-    }));
-
-    app.use(express.static(__dirname + "/public"));
-  }
   app.locals.pretty = true;
 });
 
 app.configure("development", function() {
+  app.use(stylus.middleware({
+    src: __dirname + "/public",
+    dest: __dirname + "/public",
+    compile: function(str, path) {return stylus(str).set("filename", path).use(nib());}
+  }));
+
+  app.use(express.static(__dirname + "/public"));
   app.use(express.errorHandler());
 });
 
