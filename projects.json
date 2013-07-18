@@ -15,14 +15,14 @@
   },
   {
     "name": "Regning",
-    "description": "Enkelt fakturaprogram der du fyller inn data og så kan velge mellom å laste ned som PDF eller sende direkte til mottaker (med kopi til deg selv). Masse HTML5-goodies, så funker kun i utvalgte nettlesere.",
+    "description": "Enkelt program for å generere fakturaer som PDF.",
     "url": "http://regning.hkri.me",
     "image": "/images/regning.png",
     "tags": []
   },
   {
     "name": "Julekalender",
-    "description": "Nettside hvor du kan holde oversikt over alle julekalendere du følger med på. Gå ikke glipp av muligheten til å vinne premier! Laget med RoR og Backbone.",
+    "description": "Nettside hvor du kan holde oversikt over alle julekalendere som finnes der ute. Gå ikke glipp av muligheten til å vinne premier!",
     "url": "http://julekalender.hkri.me",
     "image": "/images/julekalender.png",
     "tags": []
