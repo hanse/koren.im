@@ -157,8 +157,8 @@ footer {
   position: relative;
   top: 0;
   opacity: 0;
-  filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   -webkit-transform: rotateY(90deg);
   -moz-transform: rotateY(90deg);
   -o-transform: rotateY(90deg);
@@ -206,7 +206,6 @@ footer {
   transform: rotateY(90deg);
 }
 #work article:nth-child(2) {
-background
   -webkit-transform: rotateY(90deg);
   -moz-transform: rotateY(90deg);
   -o-transform: rotateY(90deg);
