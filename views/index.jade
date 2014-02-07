@@ -9,7 +9,9 @@ block content
             h2= project.name
             p!= project.description
             p
-              a(href='#{project.url}') Besøk &rarr;
+              if project.url
+                a(href='#{project.url}') Besøk &rarr;
+
 
           img(src='#{project.image}')
 

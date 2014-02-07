@@ -159,11 +159,11 @@ footer {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
-  -webkit-transform: rotateY(90deg);
-  -moz-transform: rotateY(90deg);
-  -o-transform: rotateY(90deg);
-  -ms-transform: rotateY(90deg);
-  transform: rotateY(90deg);
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
   height: 0;
   visibility: hidden;
   width: 100%;
@@ -186,7 +186,7 @@ footer {
   padding: 20px;
   left: 320px;
   color: #fff;
-  z-index: -100;
+  z-index: 200;
 }
 #work article img {
   width: 300px;
@@ -199,18 +199,18 @@ footer {
 }
 #work article:nth-child(1) {
   background: #3498db;
-  -webkit-transform: rotateY(90deg);
-  -moz-transform: rotateY(90deg);
-  -o-transform: rotateY(90deg);
-  -ms-transform: rotateY(90deg);
-  transform: rotateY(90deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 #work article:nth-child(2) {
-  -webkit-transform: rotateY(90deg);
-  -moz-transform: rotateY(90deg);
-  -o-transform: rotateY(90deg);
-  -ms-transform: rotateY(90deg);
-  transform: rotateY(90deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
   background: #307d81;
 }
 #work article:nth-child(3) {
@@ -222,12 +222,28 @@ footer {
   transform: rotateY(180deg);
 }
 #work article:nth-child(4) {
-  -webkit-transform: rotateY(90deg);
-  -moz-transform: rotateY(90deg);
-  -o-transform: rotateY(90deg);
-  -ms-transform: rotateY(90deg);
-  transform: rotateY(90deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
   background: #730202;
+}
+#work article:nth-child(5) {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background: #27ae60;
+}
+#work article:nth-child(6) {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background: #222;
 }
 #work article.active {
   opacity: 1;

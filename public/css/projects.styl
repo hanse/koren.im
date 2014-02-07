@@ -5,7 +5,7 @@
     position relative
     top 0
     opacity 0
-    transform rotateY(90deg)
+    transform rotateY(0deg)
     height 0
     visibility hidden
     width 100%
@@ -24,7 +24,7 @@
       padding 20px
       left 320px
       color #fff
-      z-index -100
+      z-index 200
 
     img
       width 300px
@@ -35,13 +35,13 @@
 
     &:nth-child(1)
       background #3498DB
-      transform rotateY(90deg)
+      transform rotateY(180deg)
       //transform rotateZ(90deg)
 
     // #E74C3C #F1C40F
     &:nth-child(2)
       background
-      transform rotateY(90deg)
+      transform rotateY(180deg)
       //transform rotateX(90deg)
       background #307D81
 
@@ -50,8 +50,16 @@
       transform rotateY(180deg)
 
     &:nth-child(4)
-      transform rotateY(90deg)
+      transform rotateY(180deg)
       background #730202
+
+    &:nth-child(5)
+      transform rotateY(180deg)
+      background #27ae60
+
+    &:nth-child(6)
+      transform rotateY(180deg)
+      background #222
 
     &.active
       opacity 1

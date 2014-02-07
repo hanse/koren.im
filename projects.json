@@ -26,5 +26,19 @@
     "url": "http://julekalender.hkri.me",
     "image": "/images/julekalender.png",
     "tags": []
+  },
+  {
+    "name": "Joker",
+    "description": "Liten remake av et Joker-lignende spill.",
+    "url": "http://joker.hkri.me",
+    "image": "/images/joker.png",
+    "tags": []
+  },
+  {
+    "name": "Diverse",
+    "description": "<a href='http://lambertseterrevyen.no/2011/'>Lambertseterrevyen</a>, <a href='http://mskklinikken.no'>MSK Klinikken</a>, <a href='https://abakus.no/404'>404</a>",
+    "url": "",
+    "image": "/images/etc.png",
+    "tags": []
   }
 ]
