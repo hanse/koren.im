@@ -1,13 +1,14 @@
 {
   "name": "devmoods",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "dependencies": {
-    "express": "3.2.x",
+    "express": "4.0.x",
     "stylus": "*",
     "nib": "*",
     "jade": "*",
     "coffee-script": "1.4.x",
-    "forever": "*"
+    "forever": "*",
+    "body-parser": "^1.2.2"
   },
   "engines": {
     "node": "0.10.x",

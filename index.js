@@ -1,33 +1,51 @@
-var express = require("express")
-  , stylus  = require("stylus")
-  , nib     = require("nib")
-  , app     = module.exports = express();
 
-app.configure(function() {
-  app.set("port", process.env.PORT || 5000);
-  app.set("view engine", "jade");
-  app.set("views", __dirname + "/views");
-  app.use(express.logger("dev"));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.locals.pretty = true;
-});
+var express = require('express');
+var https = require('https');
+var bodyParser = require('body-parser');
+var stylus = require('stylus');
+var nib = require('nib');
+var app = module.exports = express();
 
-app.configure("development", function() {
+/**
+ * Config
+ */
+
+app.set('port', process.env.PORT || 5000);
+app.set('view engine', 'jade');
+app.set('views', __dirname + '/views');
+app.use(bodyParser());
+app.locals.pretty = true;
+
+/**
+ * Development Config
+ */
+
+if ('development' === app.get('env')) {
   app.use(stylus.middleware({
-    src: __dirname + "/public",
-    dest: __dirname + "/public",
-    compile: function(str, path) {return stylus(str).set("filename", path).use(nib());}
+    src: __dirname + '/public',
+    dest: __dirname + '/public',
+    compile: function(str, path) {return stylus(str).set('filename', path).use(nib());}
   }));
 
-  app.use(express.static(__dirname + "/public"));
-  app.use(express.errorHandler());
+  app.use(express.static(__dirname + '/public'));
+}
+
+/**
+ * Index Page
+ */
+
+app.get('/', function(req, res) {
+  return res.render('index', {projects: require('./projects.json')});
 });
 
-app.get("/", function(req, res) {
-  return res.render("index", {projects: require("./projects.json")});
-});
+/**
+ * Listen
+ */
 
-app.listen(app.get('port'), function() {
-  console.log("listening on port " + app.get('port') + " in env " + app.get("env"));
+var fs = require('fs');
+https.createServer({
+  key: fs.readFileSync(process.env.SSL_SERVER_KEY),
+  cert: fs.readFileSync(process.env.SSL_SERVER_CERT)
+}, app).listen(app.get('port'), function() {
+  console.log('App listening on %d', app.get('port'));
 });

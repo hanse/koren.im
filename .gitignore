@@ -5,3 +5,4 @@ deploy.sh
 nginx.conf
 init.d.conf
 .env
+npm-debug.log
