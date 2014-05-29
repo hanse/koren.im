@@ -6,3 +6,4 @@ nginx.conf
 init.d.conf
 .env
 npm-debug.log
+public/css/style.css

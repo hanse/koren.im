@@ -16,17 +16,18 @@ app.set('views', __dirname + '/views');
 app.use(bodyParser());
 app.locals.pretty = true;
 
+app.use(stylus.middleware({
+  src: __dirname + '/public',
+  dest: __dirname + '/public',
+  compress: app.get('env') !== 'development',
+  compile: function(str, path) {return stylus(str).set('filename', path).use(nib());}
+}));
+
 /**
  * Development Config
  */
 
 if ('development' === app.get('env')) {
-  app.use(stylus.middleware({
-    src: __dirname + '/public',
-    dest: __dirname + '/public',
-    compile: function(str, path) {return stylus(str).set('filename', path).use(nib());}
-  }));
-
   app.use(express.static(__dirname + '/public'));
 }
 
