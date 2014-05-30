@@ -44,7 +44,6 @@ app.get('/', function(req, res) {
 
 app.use(function(req, res, next) {
   res.status(404);
-  console.log(req.headers)
   return res.render('404', {back: '/'});
 });
 
