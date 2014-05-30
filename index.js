@@ -1,6 +1,5 @@
 
 var express = require('express');
-var https = require('https');
 var bodyParser = require('body-parser');
 var stylus = require('stylus');
 var nib = require('nib');
@@ -40,13 +39,19 @@ app.get('/', function(req, res) {
 });
 
 /**
+ * 404
+ */
+
+app.use(function(req, res, next) {
+  res.status(404);
+  console.log(req.headers)
+  return res.render('404', {back: '/'});
+});
+
+/**
  * Listen
  */
 
-var fs = require('fs');
-https.createServer({
-  key: fs.readFileSync(process.env.SSL_SERVER_KEY),
-  cert: fs.readFileSync(process.env.SSL_SERVER_CERT)
-}, app).listen(app.get('port'), function() {
-  console.log('App listening on %d', app.get('port'));
+app.listen(app.get('port'), function() {
+  console.log('app listening on %d', app.get('port'));
 });
