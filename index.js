@@ -67,7 +67,7 @@ if (cluster.isMaster) {
    * Listen
    */
 
-  app.listen(app.get('port'), function() {
+  app.listen(app.get('port'), '127.0.0.1', function() {
     console.log('Worker %d: app listening on %d', cluster.worker.id, app.get('port'));
   });
 }
