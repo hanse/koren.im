@@ -1,12 +1,5 @@
 [
   {
-    "name": "workoutsapp.cc",
-    "description": "Treningsapp til iOS og web. Kommer snart.",
-    "url": "http://workoutsapp.cc",
-    "image": "/images/workouts.png",
-    "tags": []
-  },
-  {
     "name": "Klovneløpet",
     "description": "Nettside for Klovneløpet &mdash; Et årlig veldedighetsløp arrangert av studenter i Trondheim.",
     "url": "http://klovnelopet.com",
@@ -14,10 +7,17 @@
     "tags": []
   },
   {
-    "name": "Regning",
+    "name": "Fakturamaker",
     "description": "Enkelt program for å generere fakturaer som PDF.",
-    "url": "http://regning.hkri.me",
+    "url": "http://fakturamaker.no",
     "image": "/images/regning.png",
+    "tags": []
+  },
+  {
+    "name": "workoutsapp.cc",
+    "description": "Treningsapp til iOS og web. Kommer snart.",
+    "url": "http://workoutsapp.cc",
+    "image": "/images/workouts.png",
     "tags": []
   },
   {
