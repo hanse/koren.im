@@ -1,36 +1,29 @@
 [
   {
-    "name": "workoutsapp.cc",
+    "name": "Gains",
     "description": "Få oversikt over egen treningsfremgang.",
-    "url": "http://workoutsapp.cc",
+    "url": "https://gains.ninja",
     "image": "/images/workouts.png",
     "tags": []
   },
   {
     "name": "Klovneløpet",
     "description": "Nettside for Klovneløpet &mdash; Et årlig veldedighetsløp arrangert av studenter i Trondheim.",
-    "url": "http://klovnelopet.com",
+    "url": "https://klovnelopet.com",
     "image": "/images/klovnelopet.png",
     "tags": []
   },
   {
     "name": "Fakturamaker",
     "description": "Enkelt program for å generere fakturaer som PDF.",
-    "url": "http://fakturamaker.no",
+    "url": "https://fakturamaker.no",
     "image": "/images/regning.png",
-    "tags": []
-  },
-  {
-    "name": "Julekalender",
-    "description": "Nettside hvor du kan holde oversikt over alle julekalendere som finnes der ute. Gå ikke glipp av muligheten til å vinne premier!",
-    "url": "http://julekalender.hkri.me",
-    "image": "/images/julekalender.png",
     "tags": []
   },
   {
     "name": "Joker",
     "description": "Liten remake av et Joker-lignende spill.",
-    "url": "http://joker.hkri.me",
+    "url": "http://playground.koren.im/joker/",
     "image": "/images/joker.png",
     "tags": []
   },
