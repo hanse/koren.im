@@ -1,4 +1,8 @@
 server:
 	supervisor index.js
 
-.PHONY: server
+images:
+	phantomjs tools/screenshot.js
+	./tools/resize.sh
+
+.PHONY: server images
