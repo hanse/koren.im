@@ -19,6 +19,9 @@ if (cluster.isMaster) {
   var bodyParser = require('body-parser');
   var stylus = require('stylus');
   var nib = require('nib');
+  var cookieParser = require('cookie-parser');
+  var session = require('express-session');
+  var csrf = require('csurf');
   var app = module.exports = express();
 
   /**
@@ -28,7 +31,10 @@ if (cluster.isMaster) {
   app.set('port', process.env.PORT || 5000);
   app.set('view engine', 'jade');
   app.set('views', __dirname + '/views');
+  app.use(cookieParser());
+  app.use(session({secret: 'Yo'}));
   app.use(bodyParser());
+  app.use(csrf({cookie: true}));
   app.locals.pretty = true;
 
   app.use(stylus.middleware({
@@ -46,12 +52,20 @@ if (cluster.isMaster) {
     app.use(express.static(__dirname + '/public'));
   }
 
+  app.post('/', function(req, res) {
+    console.log(req.body);
+    res.send(200);
+  });
+
   /**
    * Index Page
    */
 
-  app.get('/', function(req, res) {
-    return res.render('index', {projects: require('./projects.json')});
+  app.get('*', function(req, res) {
+    return res.render('index', {
+      projects: require('./projects.json'),
+      token: req.csrfToken()
+    });
   });
 
   /**
@@ -68,6 +82,6 @@ if (cluster.isMaster) {
    */
 
   app.listen(app.get('port'), '127.0.0.1', function() {
-    console.log('Worker %d: app listening on %d', cluster.worker.id, app.get('port'));
+    console.log('Worker %d: app listening on %d (%s)', cluster.worker.id, app.get('port'), app.get('env'));
   });
 }
