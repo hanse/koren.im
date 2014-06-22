@@ -1,5 +1,6 @@
 var page = require('page');
 var request = require('superagent');
+var validator = require('validator');
 
 var sections = document.querySelectorAll('section');
 var contentNodes = {};
@@ -37,18 +38,36 @@ function setMessage(msg) {
   }, 3000);
 }
 
+function validateEmail(email) {
+  if (!email.name || !email.email || !email.body || !validator.isEmail(email.email))
+    return false;
+  return true;
+}
+
 function submit() {
+  var email = {
+    _csrf: dom('#csrf').value,
+    name: dom('#name').value,
+    email: dom('#email').value,
+    body: dom('#body').value
+  };
+
+  if (!validateEmail(email)) return setMessage('Alle feltene må fylles inn og være gyldige.');
+  var button = dom('button');
+  button.innerText = 'Sender...';
+  button.disabled = true;
+
   request
     .post('/')
-    .send({
-      _csrf: dom('#csrf').value,
-      name: dom('#name').value,
-      email: dom('#email').value,
-      body: dom('#body').value
-    })
+    .send(email)
     .end(function(res) {
-      if (res.ok) return setMessage('Takk!');
+      if (res.ok) {
+        button.innerText = 'Sendt!';
+        dom('form').style.display = 'none';
+        return dom('#form-message').innerText = 'Takk for henvendelsen!';
+      }
       setMessage('Noe gikk galt');
+      button.disabled = false;
     });
 }
 
