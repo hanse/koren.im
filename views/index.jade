@@ -1,17 +1,24 @@
 extends layout
 
 block content
-  #work.page
-    each project in projects
-      article
-        div.container
-          div.text
-            h2= project.name
-            p!= project.description
-            p
-              if project.url
-                a(href='#{project.url}') Besøk &rarr;
 
+  section#projects
+    h2.center
+      a(href='./prosjekter') Prosjekter
+    .content.center
+      each project in projects
+        a(href='#{project.url}')
+          img.project(src='/images/projects/#{project.slug}.small.png')
 
-          img(src='#{project.image}')
-
+  section#contact
+    h2.center
+      a(href='./kontakt') Kontakt
+    .content.center
+      #form-message
+      form(action='/' method='post')
+        div
+          input#name(type='text' name='name' placeholder='Navn')
+          input#email(type='email' name='email' placeholder='E-post')
+          input#csrf(type='hidden' name='_csrf' value='#{token}')
+          textarea#body(name='body')
+          button(type='submit') Send e-post!

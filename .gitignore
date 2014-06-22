@@ -7,3 +7,4 @@ init.d.conf
 .env
 npm-debug.log
 public/css/style.css
+public/app.js

@@ -3,68 +3,157 @@
 
 global-reset()
 
-backgroundColor = #fff
-
-@font-face
-  font-family VeraMono
-  src url("../VeraMono.ttf")
+$first-section-color = #fff
+$second-section-color = #fff
 
 *
   box-sizing border-box
+  font-smoothing antialiased
 
 body
-  font-smoothing antialiased
-  font-size 16px
-  line-height 1.5
+  font-size 18px
+  line-height 1.8
+  background #fff
+  color #444
+  font-family 'Source Sans Pro', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, sans-serif
+  position relative
+  width auto
   margin 0 auto
-  background-color backgroundColor
-  color: #777
-  position relative
-  font-family VeraMono, Menlo, Monaco, "Courier New", monospace
-  position relative
+
+.center
+  max-width 640px
+  margin 0 auto
 
 header
-  padding 20px
+  padding 10px 0
   position relative
+  background #1B222A
+  line-height 60px
+
+.social
+  float right
+  line-height 50px
+
+  a
+    color #fff
+    padding 5px
+    display inline-block
+    color #aaa
+
+    &:hover
+      color #ccc
 
 h1
-  color #D35400
+  color #bbb
+  font-size 26px
   font-weight 400
-  max-width 700px
-  margin 0 auto
-  text-align center
-  font-size 56px
+
+  span
+    color #eee
+
+h3
+  font-size 24px
   font-weight 700
-  text-transform uppercase
-  text-shadow 4px 2px 0 #F1C40F
+
+section
+  background #E82C0C
+
+  &:nth-child(odd)
+    background #FF530D
+
+  h2
+    font-size 30px
+    color #fff
+
+    a
+      color #fff
+      display block
+      padding 50px 0
+
+      &:after
+        content ' \FFEB'
+
+      &:hover
+        text-decoration none
+
+  .content
+    display none
+    padding-bottom 20px
+    color #000
+
+  &.active
+    h2 a
+      padding-bottom 10px
+
+      &:after
+        content ' \FFEC'
+
+    .content
+      display block
+
+
+#projects
+  .content
+    text-align center
+
+.project
+  height 128px
+  border-radius (@height/2)
+  margin 5px
+  transition transform 1s
+
+  &:hover
+    transform scale(1.2)
 
 a
-  color #92789f
+  color #1B222A
   text-decoration none
 
   &:hover
     text-decoration underline
 
-section
-  background #f1ede9
-  border-bottom 10px dotted backgroundColor
-  border-top 10px dotted backgroundColor
-  padding 20px 0
+article
+  clear both
 
-h2
-  font 20px "Open Sans"
-  text-transform: uppercase
-  color #333
-  font-weight 700
-  margin-top 20px
+  img
+    width 96px
+    border-radius (@width/2)
+    float right
 
 footer
   text-align center
   color #aaa
   position relative
-  top 70px
+  clear both
+  top 40px
 
 
-@import "projects"
+input, textarea
+  display block
+  font-size 16px
+  border 0
+  outline 0
+  background #fff
+  margin 0
+  padding 10px
+  width 100%
+  margin-bottom 10px
 
+  &:focus
+    background #FAFFBD
 
+textarea
+  height 150px
+
+button
+  background darken(#FF530D, 30%)
+  font-size 16px
+  color #fff
+  border 0
+  outline 0
+  cursor pointer
+  padding 10px 20px
+  margin 0
+
+  &:hover
+    background darken(#FF530D, 25%)
