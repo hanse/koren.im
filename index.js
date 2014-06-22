@@ -84,7 +84,7 @@ if (cluster.isMaster) {
 
     smtp.sendMail({
       from: name + '<' + email + '>',
-      to: 'hkri@koren.im',
+      to: process.env.CONTACT_MAIL_TO,
       subject: 'Henvendelse fra koren.im: ' + name,
       replyTo: email,
       text: emailTemplate(name, email, body)
