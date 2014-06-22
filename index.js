@@ -22,6 +22,9 @@ if (cluster.isMaster) {
   var cookieParser = require('cookie-parser');
   var session = require('express-session');
   var csrf = require('csurf');
+  var util = require('util');
+  var nodemailer = require('nodemailer');
+  var validator = require('validator');
   var app = module.exports = express();
 
   /**
@@ -52,9 +55,44 @@ if (cluster.isMaster) {
     app.use(express.static(__dirname + '/public'));
   }
 
+  var smtp = nodemailer.createTransport('SMTP', {
+    service: 'Gmail',
+    auth: {
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS
+    }
+  });
+
+  function emailTemplate(name, email, body) {
+    return util.format('Mail fra %s (%s):\n\n %s', name, email, body);
+  }
+
   app.post('/', function(req, res) {
-    console.log(req.body);
-    res.send(200);
+
+    var name = validator.stripLow(req.body.name);
+    var email = validator.stripLow(req.body.email);
+    var body = req.body.body;
+    var errors = [];
+
+    if (!req.body.name) errors.push('name is required');
+    if (!req.body.email) errors.push('email is required');
+    if (!req.body.body) errors.push('body is required');
+    if (!validator.isEmail(req.body.email)) errors.push('email must look valid');
+
+    console.log(errors);
+    if (errors.length > 0) return res.send(403, errors);
+
+    smtp.sendMail({
+      from: name + '<' + email + '>',
+      to: 'hkri@koren.im',
+      subject: 'Henvendelse fra koren.im: ' + name,
+      replyTo: email,
+      text: emailTemplate(name, email, body)
+    }, function(err, data) {
+      console.log(err, data)
+      if (err) return res.send(500, err);
+      res.send(200);
+    });
   });
 
   /**

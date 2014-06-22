@@ -17,10 +17,10 @@ block content
       #form-message
       form(action='/' method='post')
         div
-          input#name(type='text' name='name' placeholder='Navn')
-          input#email(type='email' name='email' placeholder='E-post')
+          input#name(type='text' name='name' placeholder='Navn' required)
+          input#email(type='email' name='email' placeholder='E-post' required)
           input#csrf(type='hidden' name='_csrf' value='#{token}')
-          textarea#body(name='body' placeholder='Hei!')
-          button(type='submit') Send e-post!
+          textarea#body(name='body' placeholder='Hei!' required)
+          button(type='submit', disabled) Send e-post!
 
       p.info Du kan også sende e-post direkte til <a href='mailto:hei@koren.im'>hei@koren.im</a> eller ringe <strong class='phone'>995 36 797</strong>.
