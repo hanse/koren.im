@@ -103,7 +103,7 @@ section
 
 .project
   width 150px
-  border-radius (@width/2) - 10px
+  border-radius (@width/2)
   margin 5px
   transition transform 1s
   border 8px solid rgba(255, 255, 255, .2)
@@ -172,3 +172,11 @@ button
   margin 20px 0
   color #fff
   background rgba(255, 255, 255, .2)
+
+@media (max-width 800px)
+  .center
+    padding 0 20px
+
+  .project
+    width 120px
+    border-radius (@width/2)
