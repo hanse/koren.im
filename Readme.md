@@ -1,3 +1,3 @@
 # koren.im
 
-My web site [koren.im](http://koren.im). Check it out.
+> Personal website [koren.im](https://koren.im)
