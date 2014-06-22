@@ -17,7 +17,7 @@ public/app.js: assets/js/index.js
 	$(BROWSERIFY) assets/js/index.js | $(UGLIFY) > public/app.js
 
 public/app.css: $(STYL)
-	node_modules/.bin/stylus --compress --resolve-url --inline --include node_modules/nib/lib < app/css/style.styl > public/app.css
+	node_modules/.bin/stylus --compress --resolve-url --inline --include node_modules/nib/lib < assets/css/style.styl > public/app.css
 
 else
 
