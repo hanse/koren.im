@@ -1,10 +1,6 @@
 node_modules
 .DS_Store
-public/style.css
-deploy.sh
-nginx.conf
-init.d.conf
 .env
 npm-debug.log
-public/css/style.css
 public/app.js
+public/app.css

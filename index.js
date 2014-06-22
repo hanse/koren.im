@@ -17,8 +17,6 @@ if (cluster.isMaster) {
 
   var express = require('express');
   var bodyParser = require('body-parser');
-  var stylus = require('stylus');
-  var nib = require('nib');
   var cookieParser = require('cookie-parser');
   var session = require('express-session');
   var csrf = require('csurf');
@@ -39,13 +37,6 @@ if (cluster.isMaster) {
   app.use(bodyParser());
   app.use(csrf({cookie: true}));
   app.locals.pretty = true;
-
-  app.use(stylus.middleware({
-    src: __dirname + '/public',
-    dest: __dirname + '/public',
-    compress: app.get('env') !== 'development',
-    compile: function(str, path) {return stylus(str).set('filename', path).use(nib());}
-  }));
 
   /**
    * Development Config
