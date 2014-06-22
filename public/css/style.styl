@@ -3,8 +3,8 @@
 
 global-reset()
 
-$first-section-color = #fff
-$second-section-color = #fff
+$first-section-color = #c0392b
+$second-section-color = #e74c3c
 
 *
   box-sizing border-box
@@ -45,8 +45,9 @@ header
 
 h1
   color #bbb
-  font-size 26px
-  font-weight 400
+  font-size 20px
+  font-weight 700
+  text-transform uppercase
 
   span
     color #eee
@@ -57,9 +58,11 @@ h3
 
 section
   background #E82C0C
+  background $first-section-color
 
   &:nth-child(odd)
     background #FF530D
+    background $second-section-color
 
   h2
     font-size 30px
@@ -97,13 +100,16 @@ section
     text-align center
 
 .project
-  height 128px
-  border-radius (@height/2)
+  width 150px
+  border-radius (@width/2) - 10px
   margin 5px
   transition transform 1s
+  border 8px solid rgba(255, 255, 255, .2)
+  transition border-color .4s
+
 
   &:hover
-    transform scale(1.2)
+    border-color rgba(255, 255, 255, .4)
 
 a
   color #1B222A
@@ -146,7 +152,7 @@ textarea
   height 150px
 
 button
-  background darken(#FF530D, 30%)
+  background rgba(0, 0, 0, .4)
   font-size 16px
   color #fff
   border 0
@@ -156,4 +162,10 @@ button
   margin 0
 
   &:hover
-    background darken(#FF530D, 25%)
+    background rgba(0, 0, 0, .3)
+
+.info
+  padding 10px 20px
+  margin 20px 0
+  color #fff
+  background rgba(255, 255, 255, .2)
