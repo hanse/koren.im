@@ -15,7 +15,7 @@ async.eachSeries(projects, function(project, fn) {
   page.open(project.url, function(status) {
     if (status !== 'success') return fn(status);
     window.setTimeout(function() {
-      page.render('public/images/projects/' + url.parse(project.url).hostname + '.png');
+      page.render('public/images/projects/' + project.slug + '.png');
       fn();
     }, 1000);
   });
