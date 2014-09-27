@@ -1,6 +1,5 @@
 #!/usr/bin/env phantomjs
 
-var url = require('url');
 var async = require('async');
 var projects = require('../projects.json');
 var page = require('webpage').create();

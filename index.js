@@ -33,8 +33,12 @@ if (cluster.isMaster) {
   app.set('view engine', 'jade');
   app.set('views', __dirname + '/views');
   app.use(cookieParser());
-  app.use(session({secret: 'Yo'}));
-  app.use(bodyParser());
+  app.use(session({
+    secret: process.env.SESSION_SECRET || 'Yo',
+    saveUninitialized: true,
+    resave: true
+  }));
+  app.use(bodyParser.json());
   app.use(csrf({cookie: true}));
   app.locals.pretty = true;
 
