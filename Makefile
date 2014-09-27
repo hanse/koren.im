@@ -29,7 +29,10 @@ public/app.css: $(STYL)
 
 endif
 
+node_modules: package.json
+	@npm install
+
 clean:
-	rm -rf public/app.js
+	rm -rf public/app.js public/app.css
 
 .PHONY: server images clean
