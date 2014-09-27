@@ -1,6 +1,6 @@
 {
   "name": "koren.im",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "dependencies": {
     "express": "4.0.x",
     "stylus": "^0.45.1",
