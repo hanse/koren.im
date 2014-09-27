@@ -8,6 +8,14 @@
     "tags": []
   },
   {
+    "name": "fairpay",
+    "slug": "fairpay",
+    "description": "Split bills easily",
+    "url": "https://fairpay.io",
+    "image": "/images/fairpay.png",
+    "tags": []
+  },
+  {
     "name": "Klovneløpet",
     "slug": "klovnelopet",
     "description": "Nettside for Klovneløpet &mdash; Et årlig veldedighetsløp arrangert av studenter i Trondheim.",
@@ -24,11 +32,29 @@
     "tags": []
   },
   {
+    "name": "Ny i Trondheim",
+    "slug": "nyitrondheim",
+    "description": "",
+    "url": "http://nyitrondheim.no",
+    "image": "/images/nyitrondheim.png",
+    "tags": []
+  },
+  {
     "name": "Joker",
     "slug": "joker",
     "description": "Liten remake av et Joker-lignende spill.",
     "url": "http://playground.koren.im/joker/",
     "image": "/images/joker.png",
     "tags": []
+  },
+  {
+    "name": "MSK klinikken",
+    "slug": "mskklinikken",
+    "url": "http://mskklinikken.no"
+  },
+  {
+    "name": "Oldtimer Service",
+    "slug": "oldtimerservice",
+    "url": "http://oldtimerservice.no"
   }
 ]

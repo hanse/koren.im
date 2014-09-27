@@ -11,13 +11,13 @@ page.clipRect = {width: 1440, height: 990};
 async.eachSeries(projects, function(project, fn) {
   console.log('Grabbed', project.url, '!');
 
-  if (!project.url) fn('no urls');
+  if (!project.url) return fn('no urls');
   page.open(project.url, function(status) {
     if (status !== 'success') return fn(status);
     window.setTimeout(function() {
       page.render('public/images/projects/' + project.slug + '.png');
       fn();
-    }, 1000);
+    }, 2000);
   });
 }, function(err) {
   console.log('Failed', err)
