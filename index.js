@@ -50,7 +50,7 @@ if (cluster.isMaster) {
     app.use(express.static(__dirname + '/public'));
   }
 
-  var smtp = nodemailer.createTransport('SMTP', {
+  var smtp = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
       user: process.env.GMAIL_USER,
@@ -74,7 +74,6 @@ if (cluster.isMaster) {
     if (!req.body.body) errors.push('body is required');
     if (!validator.isEmail(req.body.email)) errors.push('email must look valid');
 
-    console.log(errors);
     if (errors.length > 0) return res.send(403, errors);
 
     smtp.sendMail({
@@ -84,9 +83,8 @@ if (cluster.isMaster) {
       replyTo: email,
       text: emailTemplate(name, email, body)
     }, function(err, data) {
-      console.log(err, data)
-      if (err) return res.send(500, err);
-      res.send(200);
+      if (err) return res.status(500).send(err);
+      res.status(200).end();
     });
   });
 
