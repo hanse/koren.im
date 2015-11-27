@@ -23,7 +23,14 @@ if (cluster.isMaster) {
   var util = require('util');
   var nodemailer = require('nodemailer');
   var validator = require('validator');
+  var raven = require('raven');
   var app = module.exports = express();
+
+  var sentry = new raven.Client(
+    process.env.NODE_ENV === 'production' && process.env.SENTRY_DSN
+  );
+
+  sentry.patchGlobal();
 
   /**
    * Config
@@ -41,6 +48,8 @@ if (cluster.isMaster) {
   app.use(bodyParser.json());
   app.use(csrf({cookie: true}));
   app.locals.pretty = true;
+
+  app.use(raven.middleware.express.requestHandler(sentry));
 
   /**
    * Development Config
@@ -99,6 +108,8 @@ if (cluster.isMaster) {
     });
   });
 
+  app.use(raven.middleware.express.errorHandler(sentry));
+
   /**
    * 404
    */
@@ -107,6 +118,7 @@ if (cluster.isMaster) {
     res.status(404);
     return res.render('404', {back: '/'});
   });
+
 
   /**
    * Listen
