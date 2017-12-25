@@ -1,30 +1,24 @@
 {
   "name": "koren.im",
+  "private": true,
+  "description": "Personal homepage",
   "version": "2.0.2",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Hanse/koren.im"
-  },
+  "author": "Hans-Kristian Koren",
   "dependencies": {
-    "body-parser": "^1.9.0",
-    "browserify": "^5.12.1",
-    "cookie-parser": "^1.3.3",
-    "csurf": "^1.6.1",
-    "express": "^4.9.5",
-    "express-session": "^1.8.2",
-    "forever": "^0.11.1",
-    "jade": "^1.7.0",
-    "nib": "^1.0.3",
-    "nodemailer": "^1.3.0",
-    "nodemailer-wellknown": "^0.1.2",
-    "page": "^1.3.7",
-    "raven": "0.9.0",
-    "stylus": "^0.49.1",
-    "superagent": "^0.19.0",
-    "uglify-js": "^2.4.15",
-    "validator": "^3.19.0"
+    "gatsby": "^1.9.145",
+    "gatsby-link": "^1.6.32",
+    "gatsby-plugin-glamor": "^1.6.10",
+    "gatsby-plugin-google-analytics": "^1.0.14",
+    "gatsby-plugin-react-helmet": "^1.0.8"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "async": "^0.9.0"
+    "prettier": "^1.9.2"
   }
 }
