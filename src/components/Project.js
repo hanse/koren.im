@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from 'glamor';
+import Markdown from 'react-markdown';
 
 const fromLeft = css.keyframes('fromLeft', {
   '0%': {
@@ -35,6 +36,8 @@ const Project = ({
   url,
   tags = [],
   type = 'project',
+  appStore,
+  playStore,
   index
 }) => (
   <article
@@ -62,7 +65,47 @@ const Project = ({
       <div>{tags.map(tag => <Pill key={tag}>{tag}</Pill>)}</div>
     </div>
 
-    {description && <div css={{ paddingTop: 10 }}>{description}</div>}
+    {description && (
+      <div css={{ paddingTop: 10 }}>
+        <Markdown source={description} />
+      </div>
+    )}
+
+    <div css={{ display: 'flex', alignItems: 'center' }}>
+      {appStore && (
+        <a
+          href={appStore}
+          css={{
+            border: 0,
+            boxShadow: 'none',
+            ':hover': { background: 'transparent' }
+          }}
+        >
+          <img
+            alt="App Store"
+            src="https://devimages-cdn.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
+            height="30"
+          />
+        </a>
+      )}
+
+      {playStore && (
+        <a
+          href={playStore}
+          css={{
+            border: 0,
+            boxShadow: 'none',
+            ':hover': { background: 'transparent' }
+          }}
+        >
+          <img
+            alt="Get it on Google Play"
+            src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+            height="40"
+          />
+        </a>
+      )}
+    </div>
   </article>
 );
 

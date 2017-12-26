@@ -23,6 +23,8 @@ const IndexPage = () => (
       url="https://listfully.no/"
       tags={['JavaScript', 'React Native', 'iOS', 'Android']}
       description="Create and share your own gift lists. An app I created for a client for both iOS and Android."
+      appStore="https://itunes.apple.com/us/app/listfully/id1252572755?mt=8"
+      playStore="https://play.google.com/store/apps/details?id=com.listfully"
     />
     {/*<Project
       index={1}
@@ -37,13 +39,15 @@ const IndexPage = () => (
       tags={['JavaScript', 'React Native', 'iOS', 'Android']}
       description="A social football app I built for a client a couple of years ago when React Native was still in its early stages. One can safely say that React Native is continuously improving for the better. It was available on both iOS and Android."
       url="https://itunes.apple.com/us/app/fuuto/id1108571181?mt=8"
+      appStore="https://itunes.apple.com/us/app/fuuto/id1108571181?mt=8"
+      playStore="https://play.google.com/store/apps/details?id=com.fuuto&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
     />
     <Project
       index={3}
-      name="fakturamaker.no"
+      name="Fakturamaker.no"
       url="https://fakturamaker.no"
       tags={['JavaScript', 'Node.js', 'Angular.js']}
-      description="The tool I use to create invoices. Generates PDFs using wkhtmltopdf."
+      description="The tool I use to create invoices. Generates PDFs using `wkhtmltopdf`."
     />
     <Project
       index={4}
