@@ -1,16 +1,6 @@
 import React from 'react';
 import { css } from 'glamor';
-
-const fadeIn = css.keyframes('fadeIn', {
-  '0%': {
-    opacity: 0,
-    transform: 'scale(2)'
-  },
-  '100%': {
-    opacity: 1,
-    transform: 'scale(1)'
-  }
-});
+import { MOBILE, fadeIn } from '../styles';
 
 const animation = {
   animationDuration: `0.1s`,
@@ -34,10 +24,11 @@ class Header extends React.PureComponent {
           textAlign: 'center',
           borderBottom: '10px dotted #eee',
           margin: '0 -50px 30px -50px',
-          overflowWrap: 'break-word',
-          '@media (max-width: 800px)': {
-            fontSize: 40,
-            padding: '0 30px 15px 30px',
+          overflowWrap: 'normal',
+          [MOBILE]: {
+            fontSize: 36,
+            paddingBottom: 20,
+            margin: '0 0 30px 0',
             lineHeight: 1
           }
         }}

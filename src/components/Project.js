@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from 'glamor';
 import Markdown from 'react-markdown';
+import { MOBILE } from '../styles';
 
 const fromLeft = css.keyframes('fromLeft', {
   '0%': {
@@ -56,7 +57,7 @@ const Project = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        '@media (max-width: 600px)': {
+        [MOBILE]: {
           display: 'block'
         }
       }}
@@ -71,7 +72,15 @@ const Project = ({
       </div>
     )}
 
-    <div css={{ display: 'flex', alignItems: 'center' }}>
+    <div
+      css={{
+        display: 'flex',
+        alignItems: 'center',
+        [MOBILE]: {
+          justifyContent: 'center'
+        }
+      }}
+    >
       {appStore && (
         <a
           href={appStore}

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import { MOBILE } from '../styles';
 
 import './index.css';
 
@@ -22,7 +23,10 @@ const Layout = ({ children }) => (
       css={{
         margin: '0 auto',
         maxWidth: 800,
-        padding: 20
+        padding: 20,
+        [MOBILE]: {
+          textAlign: 'center'
+        }
       }}
     >
       {children()}

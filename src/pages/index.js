@@ -1,19 +1,52 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import { css } from 'glamor';
+
 import Header from '../components/Header';
 import Project from '../components/Project';
+import me from '../me.png';
+import { MOBILE, opacityIn } from '../styles';
+
+const PROFILE_IMAGE_SIZE = 160;
 
 const IndexPage = () => (
   <div css={{ paddingTop: 50, paddingBottom: 50 }}>
     <Header />
-    <p>
-      I'm a developer mainly working with financial software at{' '}
-      <a href="https://itera.no">Itera</a> and{' '}
-      <a href="https://cicero.no">Cicero</a> plus various side projects.
-      Currently I'm mostly doing typed JavaScript with Flow, React and React
-      Native development, but I also have some experience with Python, Ruby (on
-      Rails) and Java 8.
-    </p>
+    <div
+      css={{
+        display: 'flex',
+        alignItems: 'center',
+        [MOBILE]: {
+          flexDirection: 'column-reverse'
+        }
+      }}
+    >
+      <p css={{ flex: 1 }}>
+        I'm a developer mainly working with financial software at{' '}
+        <a href="https://itera.no">Itera</a> and{' '}
+        <a href="https://cicero.no">Cicero</a> plus various side projects.
+        Currently I'm mostly doing typed JavaScript with Flow, React and React
+        Native development, but I also have some experience with Python, Ruby
+        (on Rails) and Java.
+      </p>
+      <img
+        src={me}
+        css={{
+          borderRadius: PROFILE_IMAGE_SIZE / 2,
+          width: PROFILE_IMAGE_SIZE,
+          height: PROFILE_IMAGE_SIZE,
+          marginLeft: 10,
+          [MOBILE]: {
+            marginLeft: 0,
+            marginBottom: 10
+          },
+          animationDuration: `0.4s`,
+          animationName: `${opacityIn}`,
+          animationIterationCount: 1,
+          animationFillMode: 'both'
+        }}
+      />
+    </div>
     <h2>
       <span>Showcase</span>
     </h2>
@@ -70,12 +103,26 @@ const IndexPage = () => (
       tags={['JavaScript', 'React']}
       description="During my time at the Norwegian University of Science and Technology I helped build the new website for the fraternity Abakus. A rather big project written in React and Django."
     />
+    <Project
+      index={7}
+      name="Running Pace Calculator"
+      url="https://running.koren.im"
+      tags={['JavaScript', 'React', 'React Native Web']}
+      description="Calculate the required pace and speed to reach a running time-goal. Uses AI for smart inputs."
+    />
+    <Project
+      index={8}
+      name="Maconomy CLI"
+      url="https://github.com/hanse/maconomy"
+      tags={['Node.js']}
+      description="JavaScript library and command line interface for Deltek's Maconomy time reporting software. Made it because their UI is objectively useless and I have to use it every week."
+    />
     <h2>
       <span>Contact</span>
     </h2>
     I'm all over the internet, including{' '}
     <a href="https://www.linkedin.com/in/hanskristiankoren/">LinkedIn</a> and{' '}
-    <a href="https://github.com/Hanse">GitHub</a>. You can also email me at{' '}
+    <a href="https://github.com/hanse">GitHub</a>. You can also email me at{' '}
     <a href="mailto:hanse@koren.im">hanse@koren.im</a>.
   </div>
 );
