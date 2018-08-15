@@ -59,13 +59,14 @@ const IndexPage = () => (
       appStore="https://itunes.apple.com/us/app/listfully/id1252572755?mt=8"
       playStore="https://play.google.com/store/apps/details?id=com.listfully"
     />
-    {/*<Project
+    <Project
       index={1}
       name="Ninjagains"
-      tags={['JavaScript', 'React Native']}
+      tags={['JavaScript', 'React Native', 'iOS', 'Android']}
       url="https://getninjagains.com"
-      description={'Track your strength workouts in an enjoyable manner.'}
-    />*/}
+      description={'Track your strength workouts effortlessly.'}
+      appStore="https://itunes.apple.com/no/app/ninjagains/id1400435707"
+    />
     <Project
       index={2}
       name="Fuuto"
