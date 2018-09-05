@@ -71,7 +71,7 @@ const IndexPage = () => (
       index={2}
       name="Fuuto"
       tags={['JavaScript', 'React Native', 'iOS', 'Android']}
-      description="A social football app I built for a client a couple of years ago when React Native was still in its early stages. One can safely say that React Native is continuously improving for the better. It was available on both iOS and Android."
+      description="A social football app I built for a client a couple of years ago. It was available on both iOS and Android."
       url="https://itunes.apple.com/us/app/fuuto/id1108571181?mt=8"
       appStore="https://itunes.apple.com/us/app/fuuto/id1108571181?mt=8"
       playStore="https://play.google.com/store/apps/details?id=com.fuuto&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
@@ -81,14 +81,14 @@ const IndexPage = () => (
       name="Fakturamaker.no"
       url="https://fakturamaker.no"
       tags={['JavaScript', 'Node.js', 'Angular.js']}
-      description="The tool I use to create invoices. Generates PDFs using `wkhtmltopdf`."
+      description="The tool I use to create invoices."
     />
     <Project
       index={4}
       name="Timetracker"
       url="https://timetracker.koren.im"
       tags={['JavaScript', 'React']}
-      description="A tool for tracking time spent on different tasks during the course of a day."
+      description="A very beta-ish tool for tracking time spent on different tasks during the course of a day."
     />
     <Project
       index={5}
@@ -109,7 +109,7 @@ const IndexPage = () => (
       name="Running Pace Calculator"
       url="https://running.koren.im"
       tags={['JavaScript', 'React', 'React Native Web']}
-      description="Calculate the required pace and speed to reach a running time-goal. Uses AI for smart inputs."
+      description="Calculate the required pace and speed to reach a running time-goal."
     />
     <Project
       index={8}
@@ -122,7 +122,8 @@ const IndexPage = () => (
       <span>Contact</span>
     </h2>
     I'm all over the internet, including{' '}
-    <a href="https://www.linkedin.com/in/hanskristiankoren/">LinkedIn</a> and{' '}
+    <a href="https://www.linkedin.com/in/hanskristiankoren/">LinkedIn</a>,{' '}
+    <a href="https://twitter.com/hanse">Twitter</a> and{' '}
     <a href="https://github.com/hanse">GitHub</a>. You can also email me at{' '}
     <a href="mailto:hanse@koren.im">hanse@koren.im</a>.
   </div>
