@@ -11,9 +11,9 @@ html {
 }
 
 body {
-  line-height: 1.7;
+  line-height: 1.6;
   font-family: system-ui, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 17px;
   color: #333;
   background: #fdfdfd;
 }

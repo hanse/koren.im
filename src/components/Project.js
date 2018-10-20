@@ -21,7 +21,7 @@ const Pill = props => {
         background: '#ddd',
         margin: 2,
         background: '#f7eee6',
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: '700',
         color: '#444'
       }}
@@ -45,32 +45,38 @@ const Project = ({
     css={{
       marginBottom: 50,
       position: 'relative',
+      boxShadow: '0 0 30px rgba(0, 0, 0, .1)',
+      border: '1px solid #dcdcdc',
+      width: '48%',
+      [MOBILE]: {
+        width: '100%'
+      },
+      borderRadius: 5,
+      padding: 20,
       animationDuration: `0.8s`,
       animationName: `${fromLeft}`,
       animationIterationCount: 1,
       animationFillMode: 'both',
-      animationDelay: `${index / 10}s`
+      animationDelay: `${index / 10}s`,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between'
     }}
   >
-    <div
-      css={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        [MOBILE]: {
-          display: 'block'
-        }
-      }}
-    >
-      <h3>{url ? <a href={url}>{name}</a> : name}</h3>
-      <div>{tags.map(tag => <Pill key={tag}>{tag}</Pill>)}</div>
-    </div>
-
-    {description && (
-      <div css={{ paddingTop: 10 }}>
-        <Markdown source={description} />
+    <div>
+      <div>
+        <h3>{url ? <a href={url}>{name}</a> : name}</h3>
+        <div css={{ marginTop: 10 }}>
+          {tags.map(tag => <Pill key={tag}>{tag}</Pill>)}
+        </div>
       </div>
-    )}
+
+      {description && (
+        <div css={{ paddingTop: 10 }}>
+          <Markdown source={description} />
+        </div>
+      )}
+    </div>
 
     <div
       css={{
