@@ -1,8 +1,15 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { MOBILE } from '../styles';
+import me from '../me.png';
 
 import '../global.css';
+
+const twitter = props =>
+  Object.entries({ card: 'summary', ...props }).map(([name, content]) => ({
+    name: `twitter:${name}`,
+    content
+  }));
 
 const Layout = ({ children }) => (
   <div>
@@ -13,8 +20,14 @@ const Layout = ({ children }) => (
         {
           name: 'keywords',
           content:
-            'react, react native, javascript, flow, consultant, itera, cicero'
-        }
+            'react, react native, javascript, flow, consultant, devops, cloud, mobile apps'
+        },
+        ...twitter({
+          site: '@hanse',
+          title: 'Hans-Kristian Koren',
+          description: "@hanse's web site",
+          image: `https://koren.im${me}`
+        })
       ]}
     />
     <div
