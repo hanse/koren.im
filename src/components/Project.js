@@ -1,34 +1,16 @@
 import React from 'react';
 import { css } from 'glamor';
 import Markdown from 'react-markdown';
-import { MOBILE } from '../styles';
+import { MOBILE, opacityIn } from '../styles';
+import Pill from './Pill';
 
-const fromLeft = css.keyframes('fromLeft', {
-  '0%': {
-    opacity: 0
-  },
-  '100%': {
-    opacity: 1
-  }
+const animation = index => ({
+  animationDuration: `0.8s`,
+  animationName: `${opacityIn}`,
+  animationIterationCount: 1,
+  animationFillMode: 'both',
+  animationDelay: `${index / 10}s`
 });
-
-const Pill = props => {
-  return (
-    <span
-      css={{
-        padding: '4px 7px',
-        borderRadius: 4,
-        background: '#ddd',
-        margin: 2,
-        background: '#f7eee6',
-        fontSize: 14,
-        fontWeight: '700',
-        color: '#444'
-      }}
-      {...props}
-    />
-  );
-};
 
 const Project = ({
   name,
@@ -53,14 +35,10 @@ const Project = ({
       },
       borderRadius: 5,
       padding: 20,
-      animationDuration: `0.8s`,
-      animationName: `${fromLeft}`,
-      animationIterationCount: 1,
-      animationFillMode: 'both',
-      animationDelay: `${index / 10}s`,
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      ...animation(index)
     }}
   >
     <div>
