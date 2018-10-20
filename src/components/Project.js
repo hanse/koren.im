@@ -1,5 +1,4 @@
 import React from 'react';
-import { css } from 'glamor';
 import Markdown from 'react-markdown';
 import { MOBILE, opacityIn } from '../styles';
 import Pill from './Pill';

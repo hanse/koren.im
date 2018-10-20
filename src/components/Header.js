@@ -1,5 +1,4 @@
 import React from 'react';
-import { css } from 'glamor';
 import { MOBILE, fadeIn } from '../styles';
 
 const animation = {

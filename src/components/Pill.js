@@ -6,7 +6,6 @@ const Pill = props => {
       css={{
         padding: '4px 7px',
         borderRadius: 4,
-        background: '#ddd',
         margin: 2,
         background: '#f7eee6',
         fontSize: 14,
