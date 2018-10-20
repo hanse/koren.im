@@ -33,6 +33,9 @@ const Project = ({
       [MOBILE]: {
         width: '100%'
       },
+      ':hover': {
+        boxShadow: '0 0 35px rgba(0, 0, 0, .15)'
+      },
       borderRadius: 5,
       padding: 20,
       display: 'flex',
@@ -62,7 +65,8 @@ const Project = ({
         alignItems: 'center',
         [MOBILE]: {
           justifyContent: 'center'
-        }
+        },
+        paddingTop: 15
       }}
     >
       {appStore && (
