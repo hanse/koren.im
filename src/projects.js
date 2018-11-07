@@ -47,7 +47,7 @@ export default [
   },
   {
     name: 'Timetracker',
-    url: 'https://timetracker.koren.im',
+    url: 'https://timetracking.tools',
     tags: ['JavaScript', 'React'],
     description:
       'A very beta-ish tool for tracking time spent on different tasks during the course of a day.'
@@ -64,7 +64,7 @@ export default [
     url: 'https://abakus.no',
     tags: ['JavaScript', 'React'],
     description:
-      'During my time at the Norwegian University of Science and Technology I helped build the new website for the fraternity Abakus. A rather big project written in React and Django.,'
+      'During my time at the Norwegian University of Science and Technology I helped build the new website for the fraternity Abakus. A rather big project written in React and Django.'
   },
   {
     name: 'Premium Bingo Cards',
