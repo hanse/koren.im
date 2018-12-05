@@ -30,7 +30,7 @@ const Layout = ({ children }) => (
         })
       ]}
     >
-      <script async src="https://platform.koren.im/widget.js?app=koren.im" />
+      <script defer src="https://platform.koren.im/widget.js?app=koren.im" />
     </Helmet>
     <div
       css={{

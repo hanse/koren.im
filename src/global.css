@@ -39,14 +39,11 @@ h2 {
   font-weight: 300;
   position: relative;
   margin: 20px 0;
-  overflow-x: hidden;
 }
 
 h2 span {
   background: #fff;
-  display: inline-block;
-  margin-left: -20px;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 h2:after {
@@ -55,8 +52,8 @@ h2:after {
   position: absolute;
   content: '';
   top: 0;
-  left: -50px;
-  right: -50px;
+  left: -30px;
+  right: -30px;
   top: 50%;
   z-index: -1;
 }

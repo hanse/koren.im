@@ -24,9 +24,10 @@ const IndexPage = () => (
         }}
       >
         <p css={{ flex: 1 }}>
-          I'm a developer working at the consultancy firm{' '}
-          <a href="https://itera.no">Itera</a>. I'm working with web frontends,
-          mobile apps and backend systems using appropriate tools.
+          I'm a pragmatic developer who likes to make stuff solving small or big
+          problems (usually with JavaScript involved). Things I do include
+          frontend (web and mobile apps) & backend programming, infrastructure
+          automation and designing visuals needed to make great experiences.
         </p>
         <img
           src={me}
@@ -61,7 +62,9 @@ const IndexPage = () => (
           }
         }}
       >
-        {projects.map((project, index) => <Project key={index} {...project} />)}
+        {projects.map((project, index) => (
+          <Project key={index} {...project} />
+        ))}
       </div>
       <h2>
         <span>Contact</span>
