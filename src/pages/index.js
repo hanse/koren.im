@@ -24,10 +24,9 @@ const IndexPage = () => (
         }}
       >
         <p css={{ flex: 1 }}>
-          I'm a pragmatic developer who likes to make stuff solving small or big
-          problems (usually with JavaScript involved). Things I do include
-          frontend (web and mobile apps) & backend programming, infrastructure
-          automation and designing visuals needed to make great experiences.
+          I'm a developer who like to make stuff from start to end doing all the
+          things necessary to make great digital experiences. Some of the
+          technologies I use are listed in the showcase section.
         </p>
         <img
           src={me}

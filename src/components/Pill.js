@@ -10,7 +10,8 @@ const Pill = props => {
         background: '#f7eee6',
         fontSize: 14,
         fontWeight: '700',
-        color: '#444'
+        color: '#444',
+        whiteSpace: 'pre'
       }}
       {...props}
     />

@@ -10,7 +10,7 @@ export default [
   },
   {
     name: 'Ninjagains',
-    tags: ['JavaScript', 'React Native', 'iOS', 'Android'],
+    tags: ['React Native', 'iOS', 'Android', 'PostgreSQL'],
     url: 'https://getninjagains.com',
     description: 'Track your strength workouts effortlessly.',
     appStore: 'https://itunes.apple.com/no/app/ninjagains/id1400435707'
