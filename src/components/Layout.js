@@ -29,9 +29,7 @@ const Layout = ({ children }) => (
           image: `https://koren.im${me}`
         })
       ]}
-    >
-      <script defer src="https://platform.koren.im/widget.js?app=koren.im" />
-    </Helmet>
+    />
     <div
       css={{
         margin: '0 auto',
