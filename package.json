@@ -5,16 +5,16 @@
   "version": "3.0.0",
   "author": "Hans-Kristian Koren",
   "dependencies": {
-    "gatsby": "^2.0.28",
-    "gatsby-link": "^2.0.4",
-    "gatsby-plugin-glamor": "^2.0.5",
-    "gatsby-plugin-google-analytics": "^2.0.6",
-    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby": "^2.15.3",
+    "gatsby-link": "^2.2.11",
+    "gatsby-plugin-glamor": "^2.1.6",
+    "gatsby-plugin-google-analytics": "^2.1.13",
+    "gatsby-plugin-react-helmet": "^3.1.6",
     "glamor": "^2.20.40",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-helmet": "^5.2.0",
-    "react-markdown": "^4.0.3"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "react-markdown": "^4.2.1"
   },
   "scripts": {
     "build": "gatsby build",
@@ -26,6 +26,6 @@
     "singleQuote": true
   },
   "devDependencies": {
-    "prettier": "^1.14.3"
+    "prettier": "^1.18.2"
   }
 }
