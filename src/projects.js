@@ -16,7 +16,7 @@ export default [
     appStore: 'https://itunes.apple.com/no/app/ninjagains/id1400435707'
   },
   {
-    name: 'Running Pace Calculator',
+    name: 'Snittfart',
     url: 'https://running.koren.im',
     tags: ['JavaScript', 'React', 'React Native Web'],
     description:
@@ -44,13 +44,6 @@ export default [
     tags: ['Node.js'],
     description:
       "JavaScript library and command line interface for Deltek's Maconomy time reporting software. Made it because their UI is objectively useless and I have to use it every week."
-  },
-  {
-    name: 'Timetracker',
-    url: 'https://timetracking.tools',
-    tags: ['JavaScript', 'React'],
-    description:
-      'A very beta-ish tool for tracking time spent on different tasks during the course of a day.'
   },
   {
     name: 'react-calendar',
