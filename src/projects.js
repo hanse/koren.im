@@ -63,7 +63,6 @@ export default [
     name: 'Premium Bingo Cards',
     url: 'https://premiumbingocards.com',
     tags: ['Next.js'],
-    description:
-      'Simple tool to generate a massive amount of printable Bingo cards on-demand!'
+    description: 'Generate a massive amount of printable Bingo cards on-demand!'
   }
 ];
