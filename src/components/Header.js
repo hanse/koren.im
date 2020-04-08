@@ -14,16 +14,15 @@ class Header extends React.PureComponent {
     return (
       <h1
         css={{
-          letterSpacing: '2px',
           textTransform: 'uppercase',
           textShadow: '0 4px 0 #ed717e',
           fontWeight: 900,
           fontSize: 60,
           color: '#001f3f',
           textAlign: 'center',
-          borderBottom: '10px dotted #eee',
           margin: '0 -50px 30px -50px',
           overflowWrap: 'normal',
+          transform: 'rotate(-1deg)',
           [MOBILE]: {
             fontSize: 36,
             paddingBottom: 20,

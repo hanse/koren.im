@@ -29,11 +29,13 @@ const Project = ({
       boxShadow: '0 0 30px rgba(0, 0, 0, .1)',
       border: '1px solid #dcdcdc',
       width: '48%',
+      transition: 'transform 0.15s',
       [MOBILE]: {
         width: '100%'
       },
       ':hover': {
-        boxShadow: '0 0 35px rgba(0, 0, 0, .15)'
+        boxShadow: '0 0 35px rgba(0, 0, 0, .15)',
+        transform: 'scale(1.03)'
       },
       borderRadius: 5,
       padding: 20,

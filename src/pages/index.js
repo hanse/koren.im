@@ -24,9 +24,9 @@ const IndexPage = () => (
         }}
       >
         <p css={{ flex: 1 }}>
-          I'm a developer who like to make stuff from start to end doing all the
-          things necessary to make great digital experiences. Some of the
-          technologies I use are listed in the showcase section.
+          I love solving problems using the best available tools. That often
+          includes TypeScript and React (and React Native). Or it can be
+          Node.js, Python or even Java.
         </p>
         <img
           src={me}
@@ -36,6 +36,10 @@ const IndexPage = () => (
             width: PROFILE_IMAGE_SIZE,
             height: PROFILE_IMAGE_SIZE,
             marginLeft: 10,
+            filter: 'grayscale(100%)',
+            ':hover': {
+              filter: 'unset'
+            },
             [MOBILE]: {
               marginLeft: 0,
               marginBottom: 10
