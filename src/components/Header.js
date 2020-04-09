@@ -9,42 +9,43 @@ const animation = {
   display: 'inline-block'
 };
 
-class Header extends React.PureComponent {
-  render() {
-    return (
-      <h1
-        css={{
-          textTransform: 'uppercase',
-          textShadow: '0 4px 0 #ed717e',
-          fontWeight: 900,
-          fontSize: 60,
-          color: '#001f3f',
-          textAlign: 'center',
-          margin: '0 -50px 30px -50px',
-          overflowWrap: 'normal',
-          transform: 'rotate(-1deg)',
-          [MOBILE]: {
-            fontSize: 36,
-            paddingBottom: 20,
-            margin: '0 0 30px 0',
-            lineHeight: 1
-          }
-        }}
-      >
-        {'Hans-Kristian\xa0Koren'.split('').map((char, index) => (
+function Header({ title = 'Hans-Kristian Koren' }) {
+  return (
+    <h1
+      css={{
+        textTransform: 'uppercase',
+        textShadow: '0 4px 0 #ed717e',
+        fontWeight: 900,
+        fontSize: 60,
+        color: '#001f3f',
+        textAlign: 'center',
+        margin: '0 -50px 30px -50px',
+        overflowWrap: 'normal',
+        transform: 'rotate(-1deg)',
+        [MOBILE]: {
+          fontSize: 36,
+          paddingBottom: 20,
+          margin: '0 0 30px 0',
+          lineHeight: 1
+        }
+      }}
+    >
+      {title
+        .replace(/ /g, '\xa0')
+        .split('')
+        .map((char, index) => (
           <span
             key={index}
             css={{
               ...animation,
-              animationDelay: `${index / 20 + 0.1}s`
+              animationDelay: `${index / 20 + 0.05}s`
             }}
           >
             {char}
           </span>
         ))}
-      </h1>
-    );
-  }
+    </h1>
+  );
 }
 
 export default Header;
