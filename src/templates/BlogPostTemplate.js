@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import TopNav from '../components/TopNav';
+import ProfilePic from '../components/ProfilePic';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
@@ -21,7 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <div css={{ paddingTop: 50, paddingBottom: 50 }}>
         <Header title={post.frontmatter.title} />
         <article>
-          <header
+          <div
             css={{
               textAlign: 'center',
               color: '#999',
@@ -29,9 +30,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: 20
             }}
           >
-            Published {post.frontmatter.date}
-          </header>
-          <section
+            <small css={{ fontSize: 18 }}>
+              Published {post.frontmatter.date}
+            </small>
+          </div>
+          <div
             dangerouslySetInnerHTML={{ __html: post.html }}
             css={{
               '> p + p': {
@@ -56,6 +59,18 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             }}
           />
         </article>
+
+        <footer
+          css={{
+            color: '#888',
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignItems: 'center'
+          }}
+        >
+          <span>&mdash; Written by Hanse</span>
+          <ProfilePic size={40} />
+        </footer>
 
         <nav>
           <ul

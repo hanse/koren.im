@@ -3,11 +3,10 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Project from '../components/Project';
-import me from '../me.png';
-import { MOBILE, opacityIn } from '../styles';
+import { MOBILE } from '../styles';
 import projects from '../projects';
-import { Link } from 'gatsby';
 import TopNav from '../components/TopNav';
+import ProfilePic from '../components/ProfilePic';
 
 const PROFILE_IMAGE_SIZE = 160;
 
@@ -32,28 +31,7 @@ function IndexPage() {
             includes TypeScript and React (and React Native). Or it can be
             Node.js, Python or even Java.
           </p>
-          <img
-            src={me}
-            alt="Portrait"
-            css={{
-              borderRadius: PROFILE_IMAGE_SIZE / 2,
-              width: PROFILE_IMAGE_SIZE,
-              height: PROFILE_IMAGE_SIZE,
-              marginLeft: 10,
-              filter: 'grayscale(100%)',
-              ':hover': {
-                filter: 'unset'
-              },
-              [MOBILE]: {
-                marginLeft: 0,
-                marginBottom: 10
-              },
-              animationDuration: `0.4s`,
-              animationName: `${opacityIn}`,
-              animationIterationCount: 1,
-              animationFillMode: 'both'
-            }}
-          />
+          <ProfilePic size={PROFILE_IMAGE_SIZE} />
         </div>
         <h2 className="section-header">
           <span>Showcase</span>

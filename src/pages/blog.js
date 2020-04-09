@@ -2,10 +2,6 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
-import Project from '../components/Project';
-import me from '../me.png';
-import { MOBILE, opacityIn } from '../styles';
-import projects from '../projects';
 import Card from '../components/Card';
 import TopNav from '../components/TopNav';
 

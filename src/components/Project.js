@@ -47,7 +47,15 @@ const Project = ({
   >
     <div>
       <div>
-        <h3>{url ? <a href={url}>{name}</a> : name}</h3>
+        <h3>
+          {url ? (
+            <a href={url} className="colorful">
+              {name}
+            </a>
+          ) : (
+            name
+          )}
+        </h3>
         <div css={{ marginTop: 10 }}>
           {tags.map(tag => (
             <Pill key={tag}>{tag}</Pill>

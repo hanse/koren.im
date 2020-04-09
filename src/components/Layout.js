@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { MOBILE } from '../styles';
 import me from '../me.png';
-import { useStaticQuery } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import '../global.css';
 
@@ -43,6 +43,18 @@ function Layout({ children, title, description = '', keywords = '' }) {
           {
             name: 'keywords',
             content: metaKeywords
+          },
+          {
+            name: 'og:title',
+            content: 'title'
+          },
+          {
+            property: `og:description`,
+            content: metaDescription
+          },
+          {
+            property: `og:type`,
+            content: `website`
           },
           ...twitter({
             site: '@hanse',
