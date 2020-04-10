@@ -23,7 +23,7 @@ function Header({ title = 'Hans-Kristian Koren' }) {
         overflowWrap: 'normal',
         transform: 'rotate(-1deg)',
         [MOBILE]: {
-          fontSize: 36,
+          fontSize: 40,
           paddingBottom: 20,
           margin: '0 0 30px 0',
           lineHeight: 1

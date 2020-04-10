@@ -31,7 +31,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             }}
           >
             <small css={{ fontSize: 18 }}>
-              Published {post.frontmatter.date}
+              Published {post.frontmatter.date} &middot; {post.timeToRead} min
+              read
             </small>
           </div>
           <div
@@ -120,6 +121,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
       }
+      timeToRead
     }
   }
 `;
