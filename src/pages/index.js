@@ -28,9 +28,11 @@ function IndexPage() {
         >
           <p css={{ flex: 1 }}>
             I enjoy solving problems using the best available tools. Doing so
-            often includes TypeScript and React (and React Native). Other times
-            it can be Node.js or Python &mdash; or even Java. I build web apps,
-            mobile apps and backend APIs.
+            often includes <strong>TypeScript</strong> and{' '}
+            <strong>React</strong> (and React Native). Other times it can be{' '}
+            <strong>Node.js</strong> or <strong>Python</strong> &mdash; or even{' '}
+            <strong>Java</strong>. I build web apps, mobile apps and backend
+            APIs.
           </p>
           <ProfilePic size={PROFILE_IMAGE_SIZE} />
         </div>

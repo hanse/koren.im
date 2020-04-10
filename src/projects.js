@@ -12,7 +12,7 @@ export default [
     name: 'Ninjagains',
     tags: ['React Native', 'iOS', 'Android', 'PostgreSQL'],
     url: 'https://getninjagains.com',
-    description: 'Track your strength workouts effortlessly.',
+    description: 'Mobile app for tracking strength workouts effortlessly.',
     appStore: 'https://itunes.apple.com/no/app/ninjagains/id1400435707'
   },
   {
@@ -20,13 +20,19 @@ export default [
     url: 'https://running.koren.im',
     tags: ['JavaScript', 'React', 'React Native Web'],
     description:
-      'Calculate the required pace and speed to reach a running time-goal.'
+      'Calculate the required pace and speed to reach a running time-goal. Useful for race-planning.'
+  },
+  {
+    name: 'Groceries',
+    url: 'https://matvarer.koren.im',
+    tags: ['TypeScript', 'React', 'Firebase'],
+    description: 'Real-time collaborative grocery lists.'
   },
   {
     name: 'Fakturamaker.no',
     url: 'https://fakturamaker.no',
     tags: ['JavaScript', 'Node.js', 'Angular.js'],
-    description: 'The tool I use to create invoices.'
+    description: 'Generate decent looking invoices as PDF.'
   },
   {
     name: 'Fuuto',
@@ -43,14 +49,14 @@ export default [
     url: 'https://github.com/hanse/maconomy',
     tags: ['Node.js'],
     description:
-      "JavaScript library and command line interface for Deltek's Maconomy time reporting software. Made it because their UI is objectively useless and I have to use it every week."
+      "JavaScript library and command line interface for Deltek's Maconomy time reporting software. Made it because their UI is objectively useless and I have to use it every week.\n\n`npm install -g maconomy-cli`"
   },
   {
     name: 'react-calendar',
     url: 'https://github.com/hanse/react-calendar',
     tags: ['JavaScript', 'React', 'npm'],
     description:
-      'A flexible React Component for rendering standard monthly calendars.'
+      'A flexible React Component for rendering monthly calendars.\n\n`npm install react-calendar-component`'
   },
   {
     name: 'Abakus.no',
