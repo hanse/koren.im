@@ -38,13 +38,9 @@ function IndexPage() {
         </h2>
         <div
           css={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
-            margin: '0 -60px',
-            [MOBILE]: {
-              margin: 0
-            }
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gridGap: '20px'
           }}
         >
           {projects.map((project, index) => (

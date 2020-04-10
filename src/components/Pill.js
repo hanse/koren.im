@@ -4,7 +4,7 @@ const Pill = props => {
   return (
     <span
       css={{
-        padding: '4px 7px',
+        padding: '2px 7px',
         borderRadius: 4,
         margin: 2,
         background: '#f7eee6',

@@ -67,11 +67,8 @@ function Layout({ children, title, description = '', keywords = '' }) {
       <div
         css={{
           margin: '0 auto',
-          maxWidth: 800,
-          padding: 20,
-          [MOBILE]: {
-            textAlign: 'center'
-          }
+          maxWidth: 920,
+          padding: 20
         }}
       >
         {children}

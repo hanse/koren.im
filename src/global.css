@@ -51,6 +51,13 @@ h2.section-header {
   margin: 20px 0;
 }
 
+@media (max-width: 400px) {
+  h2.section-header {
+    overflow: hidden;
+    text-align: center;
+  }
+}
+
 h2.section-header span {
   background: #fff;
   padding: 0 10px;

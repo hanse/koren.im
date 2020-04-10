@@ -23,7 +23,7 @@ const Project = ({
   playStore,
   index
 }) => (
-  <Card index={index} width="49%">
+  <Card index={index}>
     <div>
       <div>
         <h3>
@@ -35,7 +35,14 @@ const Project = ({
             name
           )}
         </h3>
-        <div css={{ marginTop: 10 }}>
+        <div
+          css={{
+            marginTop: 10,
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center'
+          }}
+        >
           {tags.map(tag => (
             <Pill key={tag}>{tag}</Pill>
           ))}

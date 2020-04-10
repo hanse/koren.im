@@ -1,5 +1,5 @@
 import React from 'react';
-import { MOBILE, opacityIn } from '../styles';
+import { opacityIn } from '../styles';
 
 const animation = index => ({
   animationDuration: `0.8s`,
@@ -9,21 +9,15 @@ const animation = index => ({
   animationDelay: `${index / 10}s`
 });
 
-function Card({ as: Component = 'div', width = '100%', index = 0, ...props }) {
+function Card({ as: Component = 'div', index = 0, ...props }) {
   return (
     <Component
       {...props}
       css={{
-        marginBottom: 16,
         position: 'relative',
         boxShadow: '0 0 30px rgba(0, 0, 0, .1)',
         border: '1px solid #dcdcdc',
-        width,
-        flexShrink: 0,
         transition: 'transform 0.15s',
-        [MOBILE]: {
-          width: '100%'
-        },
         ':hover': {
           boxShadow: '0 0 35px rgba(0, 0, 0, .15)',
           transform: 'scale(1.02)',
