@@ -2,6 +2,7 @@ import React from 'react';
 import Markdown from 'react-markdown';
 import { MOBILE, opacityIn } from '../styles';
 import Pill from './Pill';
+import Card from './Card';
 
 const animation = index => ({
   animationDuration: `0.8s`,
@@ -22,29 +23,7 @@ const Project = ({
   playStore,
   index
 }) => (
-  <article
-    css={{
-      marginBottom: 50,
-      position: 'relative',
-      boxShadow: '0 0 30px rgba(0, 0, 0, .1)',
-      border: '1px solid #dcdcdc',
-      width: '48%',
-      transition: 'transform 0.15s',
-      [MOBILE]: {
-        width: '100%'
-      },
-      ':hover': {
-        boxShadow: '0 0 35px rgba(0, 0, 0, .15)',
-        transform: 'scale(1.03)'
-      },
-      borderRadius: 5,
-      padding: 20,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-      ...animation(index)
-    }}
-  >
+  <Card index={index} width="49%">
     <div>
       <div>
         <h3>
@@ -114,7 +93,7 @@ const Project = ({
         </a>
       )}
     </div>
-  </article>
+  </Card>
 );
 
 export default Project;

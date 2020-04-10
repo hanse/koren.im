@@ -9,7 +9,7 @@ const animation = index => ({
   animationDelay: `${index / 10}s`
 });
 
-function Card({ as: Component = 'div', index = 0, ...props }) {
+function Card({ as: Component = 'div', width = '100%', index = 0, ...props }) {
   return (
     <Component
       {...props}
@@ -18,7 +18,7 @@ function Card({ as: Component = 'div', index = 0, ...props }) {
         position: 'relative',
         boxShadow: '0 0 30px rgba(0, 0, 0, .1)',
         border: '1px solid #dcdcdc',
-        width: '100%',
+        width,
         flexShrink: 0,
         transition: 'transform 0.15s',
         [MOBILE]: {
