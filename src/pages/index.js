@@ -1,8 +1,8 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import { DialogOverlay, DialogContent } from '@reach/dialog';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
-import Project from '../components/Project';
+import { Project, ProjectCard } from '../components/Project';
 import { MOBILE } from '../styles';
 import projects from '../projects';
 import TopNav from '../components/TopNav';
@@ -11,6 +11,7 @@ import ProfilePic from '../components/ProfilePic';
 const PROFILE_IMAGE_SIZE = 160;
 
 function IndexPage() {
+  const [selectedProjectId, setSelectedProjectId] = useState(null);
   return (
     <Layout title="Home">
       {false && <TopNav />}
@@ -28,7 +29,7 @@ function IndexPage() {
         >
           <p css={{ flex: 1 }}>
             I enjoy solving problems using the best available tools. Doing so
-            often includes <strong>TypeScript</strong> and{' '}
+            often involves <strong>TypeScript</strong> and{' '}
             <strong>React</strong> (and React Native). Other times it can be{' '}
             <strong>Node.js</strong> or <strong>Python</strong> &mdash; or even{' '}
             <strong>Java</strong>. I build web apps, mobile apps and backend
@@ -47,9 +48,47 @@ function IndexPage() {
           }}
         >
           {projects.map((project, index) => (
-            <Project key={index} {...project} />
+            <ProjectCard
+              key={index}
+              {...project}
+              onOpen={() => setSelectedProjectId(index)}
+            />
           ))}
         </div>
+
+        {selectedProjectId != null && (
+          <>
+            <DialogOverlay
+              isOpen={selectedProjectId != null}
+              onDismiss={() => setSelectedProjectId(null)}
+              css={{
+                position: 'fixed',
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                background: 'rgba(0, 0, 0, 0.6)'
+              }}
+            >
+              <DialogContent
+                css={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  width: '100%',
+                  maxWidth: 640
+                }}
+              >
+                <Project
+                  {...projects[selectedProjectId]}
+                  onClose={() => setSelectedProjectId(null)}
+                />
+              </DialogContent>
+            </DialogOverlay>
+          </>
+        )}
 
         <section>
           <h2 className="section-header">

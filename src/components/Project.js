@@ -3,6 +3,7 @@ import Markdown from 'react-markdown';
 import { MOBILE, opacityIn } from '../styles';
 import Pill from './Pill';
 import Card from './Card';
+import npmIcon from '../images/npm.svg';
 
 const animation = index => ({
   animationDuration: `0.8s`,
@@ -12,7 +13,52 @@ const animation = index => ({
   animationDelay: `${index / 10}s`
 });
 
-const Project = ({
+export function ProjectCard({
+  name,
+  image,
+  description,
+  url,
+  tags = [],
+  type = 'project',
+  appIconSrc,
+  appStore,
+  playStore,
+  index,
+  onOpen
+}) {
+  return (
+    <Card
+      index={index}
+      style={{ background: 'white', cursor: 'pointer' }}
+      as="a"
+      onClick={onOpen}
+    >
+      <div
+        css={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between'
+        }}
+      >
+        <h3 css={{ fontSize: 20, fontWeight: 500 }}>{name}</h3>
+        {type === 'npm' && <img src={npmIcon} width={40} />}
+        {(type === 'app' || type === 'pwa') && (
+          <img
+            src={appIconSrc}
+            width={40}
+            style={{
+              borderRadius: '22.5%',
+              border: '1px solid rgba(0, 0, 0, 0.125)'
+            }}
+          />
+        )}
+        {type === 'web' && <img src={appIconSrc} width={70} />}
+      </div>
+    </Card>
+  );
+}
+
+export function Project({
   name,
   image,
   description,
@@ -21,86 +67,159 @@ const Project = ({
   type = 'project',
   appStore,
   playStore,
-  index
-}) => (
-  <Card index={index}>
-    <div>
-      <div>
-        <h3>
-          {url ? (
-            <a href={url} className="colorful">
-              {name}
-            </a>
-          ) : (
-            name
+  appIconSrc,
+  index,
+  onClose
+}) {
+  return (
+    <div
+      css={{
+        background: 'white',
+        position: 'relative',
+        padding: 0,
+        overflow: 'hidden',
+        ':focus': {
+          outline: 'none'
+        },
+        borderRadius: 10
+      }}
+    >
+      <header
+        css={{
+          background: '#eee',
+          padding: 40,
+          paddingTop: 80,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between'
+        }}
+      >
+        <h1 css={{ fontSize: 44 }}>{name}</h1>
+
+        <div>
+          {type === 'npm' && <img src={npmIcon} width={40} />}
+          {(type === 'app' || type === 'pwa') && (
+            <img
+              src={appIconSrc}
+              width={40}
+              style={{
+                borderRadius: '22.5%',
+                border: '1px solid rgba(0, 0, 0, 0.125)'
+              }}
+            />
           )}
-        </h3>
+          {type === 'web' && <img src={appIconSrc} width={70} />}
+        </div>
+      </header>
+
+      <div css={{ padding: '20px 40px' }}>
+        <div css={{ minHeight: 160 }}>
+          <div
+            css={{
+              marginTop: 10,
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center'
+            }}
+          >
+            {tags.map(tag => (
+              <Pill key={tag}>{tag}</Pill>
+            ))}
+          </div>
+
+          {description && (
+            <div css={{ paddingTop: 10 }}>
+              <Markdown source={description} />
+            </div>
+          )}
+        </div>
+
         <div
           css={{
-            marginTop: 10,
             display: 'flex',
-            flexWrap: 'wrap',
-            alignItems: 'center'
+            alignItems: 'center',
+            [MOBILE]: {
+              justifyContent: 'center'
+            },
+            paddingTop: 15
           }}
         >
-          {tags.map(tag => (
-            <Pill key={tag}>{tag}</Pill>
-          ))}
+          {appStore && (
+            <a
+              href={appStore}
+              css={{
+                border: 0,
+                boxShadow: 'none',
+                ':hover': { background: 'transparent' }
+              }}
+            >
+              <img
+                alt="App Store"
+                src="https://devimages-cdn.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
+                height="30"
+              />
+            </a>
+          )}
+
+          {playStore && (
+            <a
+              href={playStore}
+              css={{
+                border: 0,
+                boxShadow: 'none',
+                ':hover': { background: 'transparent' }
+              }}
+            >
+              <img
+                alt="Get it on Google Play"
+                src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+                height="40"
+              />
+            </a>
+          )}
+
+          {url && (
+            <a
+              href={url}
+              rel="external"
+              css={{
+                marginLeft: 'auto',
+                background: '#282828',
+                color: 'white',
+                borderRadius: 4,
+                padding: '4px 12px',
+                fontWeight: 500
+              }}
+            >
+              Visit Website
+            </a>
+          )}
         </div>
       </div>
 
-      {description && (
-        <div css={{ paddingTop: 10 }}>
-          <Markdown source={description} />
-        </div>
-      )}
+      <button
+        css={{
+          background: 'rgba(0, 0, 0, 0.8)',
+          height: 32,
+          width: 32,
+          borderRadius: 16,
+          position: 'absolute',
+          border: 0,
+          top: 16,
+          right: 16,
+          fontWeight: 500,
+          fontSize: 20,
+          cursor: 'pointer',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontFamily: 'sans-serif',
+          color: '#fff'
+        }}
+        onClick={onClose}
+      >
+        x
+      </button>
     </div>
-
-    <div
-      css={{
-        display: 'flex',
-        alignItems: 'center',
-        [MOBILE]: {
-          justifyContent: 'center'
-        },
-        paddingTop: 15
-      }}
-    >
-      {appStore && (
-        <a
-          href={appStore}
-          css={{
-            border: 0,
-            boxShadow: 'none',
-            ':hover': { background: 'transparent' }
-          }}
-        >
-          <img
-            alt="App Store"
-            src="https://devimages-cdn.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
-            height="30"
-          />
-        </a>
-      )}
-
-      {playStore && (
-        <a
-          href={playStore}
-          css={{
-            border: 0,
-            boxShadow: 'none',
-            ':hover': { background: 'transparent' }
-          }}
-        >
-          <img
-            alt="Get it on Google Play"
-            src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-            height="40"
-          />
-        </a>
-      )}
-    </div>
-  </Card>
-);
-
-export default Project;
+  );
+}

@@ -8,7 +8,7 @@ const Pill = props => {
         borderRadius: 4,
         margin: 2,
         background: '#f7eee6',
-        fontSize: 14,
+        fontSize: 16,
         fontWeight: '700',
         color: '#444',
         whiteSpace: 'pre'
