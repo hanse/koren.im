@@ -1,6 +1,6 @@
 import React from 'react';
 import me from '../me.png';
-import { MOBILE, opacityIn } from '../styles';
+import { opacityIn } from '../styles';
 
 function ProfilePic({ size = 160 }) {
   return (
@@ -15,10 +15,6 @@ function ProfilePic({ size = 160 }) {
         filter: 'grayscale(100%)',
         ':hover': {
           filter: 'unset'
-        },
-        [MOBILE]: {
-          marginLeft: 0,
-          marginBottom: 10
         },
         animationDuration: `0.4s`,
         animationName: `${opacityIn}`,

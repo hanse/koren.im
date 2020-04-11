@@ -6,7 +6,7 @@ const animation = index => ({
   animationName: `${opacityIn}`,
   animationIterationCount: 1,
   animationFillMode: 'both',
-  animationDelay: `${index / 10}s`
+  animationDelay: `${(index + Math.random() * 4) / 10}s`
 });
 
 function Card({
@@ -35,7 +35,8 @@ function Card({
         padding: 20,
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        ...animation(index)
       }}
     />
   );

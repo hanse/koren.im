@@ -14,7 +14,7 @@ function IndexPage() {
   const [selectedProjectId, setSelectedProjectId] = useState(null);
   return (
     <Layout title="Home">
-      {false && <TopNav />}
+      <TopNav />
       <div css={{ paddingTop: 50, paddingBottom: 50 }}>
         <Header />
         <div
@@ -35,6 +35,12 @@ function IndexPage() {
             <strong>Java</strong>. I build web apps, mobile apps and backend
             APIs.
           </p>
+          <div
+            css={{
+              height: 0,
+              [MOBILE]: { height: 20 }
+            }}
+          />
           <ProfilePic size={PROFILE_IMAGE_SIZE} />
         </div>
         <h2 className="section-header">
@@ -79,7 +85,10 @@ function IndexPage() {
                   flexDirection: 'column',
                   width: '100%',
                   maxWidth: 640,
-                  padding: 16
+                  padding: 16,
+                  ':focus': {
+                    outline: 'none'
+                  }
                 }}
               >
                 <Project

@@ -55,7 +55,7 @@ const styles = {
       bottom: 0,
       transition: 'transform .3s',
       zIndex: -1,
-      transform: 'translateY(45px)'
+      transform: 'translateY(50px)'
     },
     ':hover:before': {
       transform: 'translateY(0)',

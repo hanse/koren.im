@@ -1,19 +1,11 @@
 import React from 'react';
 import Markdown from 'react-markdown';
-import { MOBILE, opacityIn } from '../styles';
+import { MOBILE } from '../styles';
 import Pill from './Pill';
 import Card from './Card';
 import npmIcon from '../images/npm.svg';
 import { IoIosClose } from 'react-icons/io';
 import { FiExternalLink } from 'react-icons/fi';
-
-const animation = index => ({
-  animationDuration: `0.8s`,
-  animationName: `${opacityIn}`,
-  animationIterationCount: 1,
-  animationFillMode: 'both',
-  animationDelay: `${index / 10}s`
-});
 
 export function ProjectCard({
   name,
@@ -43,7 +35,7 @@ export function ProjectCard({
         }}
       >
         <h3 css={{ fontSize: 20, fontWeight: 500 }}>{name}</h3>
-        {type === 'npm' && <img src={npmIcon} width={40} />}
+        {type === 'npm' && <img src={npmIcon} width={40} alt="npm" />}
         {(type === 'app' || type === 'pwa') && (
           <img
             src={appIconSrc}
@@ -52,9 +44,10 @@ export function ProjectCard({
               borderRadius: '22.5%',
               border: '1px solid rgba(0, 0, 0, 0.125)'
             }}
+            alt=""
           />
         )}
-        {type === 'web' && <img src={appIconSrc} width={70} />}
+        {type === 'web' && <img src={appIconSrc} width={70} alt="" />}
       </div>
     </Card>
   );
@@ -112,7 +105,7 @@ export function Project({
         </h1>
 
         <div>
-          {type === 'npm' && <img src={npmIcon} width={40} />}
+          {type === 'npm' && <img src={npmIcon} width={40} alt="npm" />}
           {(type === 'app' || type === 'pwa') && (
             <img
               src={appIconSrc}
@@ -121,9 +114,10 @@ export function Project({
                 borderRadius: '22.5%',
                 border: '1px solid rgba(0, 0, 0, 0.125)'
               }}
+              alt=""
             />
           )}
-          {type === 'web' && <img src={appIconSrc} width={70} />}
+          {type === 'web' && <img src={appIconSrc} width={70} alt="" />}
         </div>
       </header>
 

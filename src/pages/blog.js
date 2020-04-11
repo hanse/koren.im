@@ -8,9 +8,15 @@ import TopNav from '../components/TopNav';
 function BlogPage({ data }) {
   return (
     <Layout title="Blog">
-      <TopNav />
+      <TopNav
+        leftElement={
+          <Link to="/" className="boring">
+            &larr; Hans-Kristian Koren
+          </Link>
+        }
+      />
       <div css={{ paddingTop: 50, paddingBottom: 50 }}>
-        <Header title="Hanse's Tech Blog" />
+        <Header title="Tech Blog" />
         <section>
           {data.allMarkdownRemark.edges.map(
             ({ node: { excerpt, html, frontmatter, fields } }) => (

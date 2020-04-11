@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { MOBILE } from '../styles';
 import me from '../me.png';
 import { useStaticQuery, graphql } from 'gatsby';
 
