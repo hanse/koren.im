@@ -4,6 +4,8 @@ import { MOBILE, opacityIn } from '../styles';
 import Pill from './Pill';
 import Card from './Card';
 import npmIcon from '../images/npm.svg';
+import { IoIosClose } from 'react-icons/io';
+import { FiExternalLink } from 'react-icons/fi';
 
 const animation = index => ({
   animationDuration: `0.8s`,
@@ -81,20 +83,33 @@ export function Project({
         ':focus': {
           outline: 'none'
         },
-        borderRadius: 10
+        borderRadius: 6
       }}
     >
       <header
         css={{
           background: '#eee',
-          padding: 40,
+          padding: 24,
           paddingTop: 80,
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between'
+          justifyContent: 'space-between',
+          [MOBILE]: {
+            padding: 24,
+            paddingTop: 60
+          }
         }}
       >
-        <h1 css={{ fontSize: 44 }}>{name}</h1>
+        <h1
+          css={{
+            fontSize: 44,
+            [MOBILE]: {
+              fontSize: 32
+            }
+          }}
+        >
+          {name}
+        </h1>
 
         <div>
           {type === 'npm' && <img src={npmIcon} width={40} />}
@@ -112,7 +127,7 @@ export function Project({
         </div>
       </header>
 
-      <div css={{ padding: '20px 40px' }}>
+      <div css={{ padding: '24px 24px' }}>
         <div css={{ minHeight: 160 }}>
           <div
             css={{
@@ -141,7 +156,7 @@ export function Project({
             [MOBILE]: {
               justifyContent: 'center'
             },
-            paddingTop: 15
+            paddingTop: 32
           }}
         >
           {appStore && (
@@ -156,7 +171,7 @@ export function Project({
               <img
                 alt="App Store"
                 src="https://devimages-cdn.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
-                height="30"
+                height={30}
               />
             </a>
           )}
@@ -173,7 +188,7 @@ export function Project({
               <img
                 alt="Get it on Google Play"
                 src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-                height="40"
+                height={40}
               />
             </a>
           )}
@@ -191,7 +206,7 @@ export function Project({
                 fontWeight: 500
               }}
             >
-              Visit Website
+              Visit <FiExternalLink style={{ paddingTop: 2 }} />
             </a>
           )}
         </div>
@@ -205,20 +220,24 @@ export function Project({
           borderRadius: 16,
           position: 'absolute',
           border: 0,
-          top: 16,
-          right: 16,
+          top: 8,
+          right: 8,
           fontWeight: 500,
-          fontSize: 20,
+          fontSize: 30,
           cursor: 'pointer',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           fontFamily: 'sans-serif',
-          color: '#fff'
+          color: '#fff',
+          transition: 'transform .15s',
+          ':hover': {
+            transform: 'scale(1.05)'
+          }
         }}
         onClick={onClose}
       >
-        x
+        <IoIosClose />
       </button>
     </div>
   );

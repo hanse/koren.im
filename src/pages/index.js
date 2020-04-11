@@ -78,7 +78,8 @@ function IndexPage() {
                   display: 'flex',
                   flexDirection: 'column',
                   width: '100%',
-                  maxWidth: 640
+                  maxWidth: 640,
+                  padding: 16
                 }}
               >
                 <Project
