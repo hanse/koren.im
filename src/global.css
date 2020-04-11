@@ -35,11 +35,27 @@ a.colorful {
   font-weight: bold;
   transition: all 150ms;
   padding: 2px;
+  position: relative;
+  overflow: hidden;
 }
 
-a.colorful:hover {
-  background: #bc858a;
-  color: #fff;
+a.colorful::before {
+  content: ' ';
+  position: absolute;
+  background: #edc2c6;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: transform 0.3s;
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+a.colorful:hover::before {
+  transform: scaleY(1);
+  background: #edc2c6;
 }
 
 a.boring {
@@ -94,4 +110,8 @@ label,
 button,
 a {
   cursor: pointer;
+}
+
+.textual-content p + p {
+  margin-top: 16px;
 }

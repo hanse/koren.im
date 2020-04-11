@@ -19,7 +19,7 @@ function Header({ title = 'Hans-Kristian Koren' }) {
         fontSize: 60,
         color: '#001f3f',
         textAlign: 'center',
-        margin: '0 -50px 30px -50px',
+        margin: '0 -50px 40px -50px',
         overflowWrap: 'normal',
         transform: 'rotate(-1deg)',
         [MOBILE]: {

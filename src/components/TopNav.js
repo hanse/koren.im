@@ -48,17 +48,18 @@ const styles = {
     ':before': {
       content: ' ',
       position: 'absolute',
-      height: 50,
       background: '#edc2c6',
+      top: 0,
       right: 0,
       left: 0,
       bottom: 0,
       transition: 'transform .3s',
       zIndex: -1,
-      transform: 'translateY(50px)'
+      transform: 'scaleY(0)',
+      transformOrigin: 'bottom'
     },
     ':hover:before': {
-      transform: 'translateY(0)',
+      transform: 'scaleY(1)',
       background: '#edc2c6'
     },
     ':hover': {
