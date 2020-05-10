@@ -46,12 +46,13 @@ function IndexPage() {
             </p>
 
             <p>
-              The last few years I've been working at the consultancy firm{' '}
-              <a href="https://itera.no" className="colorful">
-                Itera
-              </a>
-              , helping large financial institutions in Norway 🇳🇴 improve their
-              digital experiences.
+              <em>
+                I currently work as a Software Engineer at{' '}
+                <a href="https://itera.no" className="colorful">
+                  Kolonial.no
+                </a>
+                .
+              </em>
             </p>
           </div>
           <div

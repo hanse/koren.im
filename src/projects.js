@@ -3,6 +3,7 @@ import abakus from './images/abakus.png';
 import groceries from './images/groceries.png';
 import fakturamaker from './images/fakturamaker.png';
 import listfully from './images/listfully.png';
+import listfullyShopify from './images/listfully-shopify.png';
 
 export default [
   {
@@ -12,7 +13,7 @@ export default [
     tags: ['JavaScript', 'React Native', 'iOS', 'Android'],
     appIconSrc: listfully,
     description:
-      'Create and share your own gift lists. An app I created for a client for both iOS and Android.',
+      'Create and share your own gift lists. Listfully app for iOS and Android.',
     appStore: 'https://itunes.apple.com/us/app/listfully/id1252572755?mt=8',
     playStore: 'https://play.google.com/store/apps/details?id=com.listfully'
   },
@@ -34,6 +35,14 @@ export default [
       'https://raw.githubusercontent.com/hanse/snittfart/master/app.png',
     description:
       'Calculate the required pace and speed to reach a running time-goal. Useful for race-planning.'
+  },
+  {
+    type: 'web',
+    name: 'Listfully Shopify App',
+    url: 'https://apps.shopify.com/listfully',
+    appIconSrc: listfullyShopify,
+    description:
+      'Storefront widget for saving products from a Shopify store to Listfully and a dashboard for store owners to view analytics and get insight.'
   },
   {
     type: 'pwa',
