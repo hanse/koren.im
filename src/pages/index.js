@@ -1,19 +1,15 @@
-import { DialogContent, DialogOverlay } from '@reach/dialog';
-import React, { useState } from 'react';
+import React from 'react';
 import { IoLogoGithub } from 'react-icons/io';
 
 import Header from '../components/Header';
 import Layout from '../components/Layout';
 import ProfilePic from '../components/ProfilePic';
-import { Project, ProjectCard } from '../components/Project';
 import TopNav from '../components/TopNav';
-import projects from '../projects';
 import { MOBILE } from '../styles';
 
 const PROFILE_IMAGE_SIZE = 160;
 
 function IndexPage() {
-  const [selectedProjectId, setSelectedProjectId] = useState(null);
   return (
     <Layout title="Home">
       <TopNav
