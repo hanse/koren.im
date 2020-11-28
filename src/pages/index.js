@@ -1,13 +1,14 @@
+import { DialogContent, DialogOverlay } from '@reach/dialog';
 import React, { useState } from 'react';
-import { DialogOverlay, DialogContent } from '@reach/dialog';
-import Layout from '../components/Layout';
-import Header from '../components/Header';
-import { Project, ProjectCard } from '../components/Project';
-import { MOBILE } from '../styles';
-import projects from '../projects';
-import TopNav from '../components/TopNav';
-import ProfilePic from '../components/ProfilePic';
 import { IoLogoGithub } from 'react-icons/io';
+
+import Header from '../components/Header';
+import Layout from '../components/Layout';
+import ProfilePic from '../components/ProfilePic';
+import { Project, ProjectCard } from '../components/Project';
+import TopNav from '../components/TopNav';
+import projects from '../projects';
+import { MOBILE } from '../styles';
 
 const PROFILE_IMAGE_SIZE = 160;
 
@@ -42,7 +43,7 @@ function IndexPage() {
               <strong>React</strong> (and React Native). Other times it can be{' '}
               <strong>Node.js</strong> or <strong>Python</strong> &mdash; or
               even <strong>Java</strong>. I build web apps, mobile apps and
-              backend APIs.
+              backend systems.
             </p>
 
             <p>
@@ -63,62 +64,6 @@ function IndexPage() {
           />
           <ProfilePic size={PROFILE_IMAGE_SIZE} />
         </div>
-        <h2 className="section-header">
-          <span>Showcase</span>
-        </h2>
-        <div
-          css={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gridGap: '20px'
-          }}
-        >
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              {...project}
-              onOpen={() => setSelectedProjectId(index)}
-            />
-          ))}
-        </div>
-
-        {selectedProjectId != null && (
-          <>
-            <DialogOverlay
-              isOpen={selectedProjectId != null}
-              onDismiss={() => setSelectedProjectId(null)}
-              css={{
-                position: 'fixed',
-                top: 0,
-                right: 0,
-                bottom: 0,
-                left: 0,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                background: 'rgba(0, 0, 0, 0.6)'
-              }}
-            >
-              <DialogContent
-                css={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  width: '100%',
-                  maxWidth: 640,
-                  padding: 16,
-                  ':focus': {
-                    outline: 'none'
-                  }
-                }}
-              >
-                <Project
-                  {...projects[selectedProjectId]}
-                  onClose={() => setSelectedProjectId(null)}
-                />
-              </DialogContent>
-            </DialogOverlay>
-          </>
-        )}
 
         <section>
           <h2 className="section-header">
