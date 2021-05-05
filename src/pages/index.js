@@ -45,8 +45,8 @@ function IndexPage() {
             <p>
               <em>
                 I currently work as a Software Engineer at{' '}
-                <a href="https://kolonial.no" className="colorful">
-                  Kolonial.no
+                <a href="https://oda.com" className="colorful">
+                  Oda
                 </a>
                 .
               </em>
