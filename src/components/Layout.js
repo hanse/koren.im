@@ -1,9 +1,10 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import me from '../me.png';
-import { useStaticQuery, graphql } from 'gatsby';
-
 import '../global.css';
+
+import { graphql, useStaticQuery } from 'gatsby';
+
+import Helmet from 'react-helmet';
+import React from 'react';
+import me from '../me.png';
 
 const twitter = props =>
   Object.entries({ card: 'summary', ...props }).map(([name, content]) => ({
@@ -62,7 +63,9 @@ function Layout({ children, title, description = '', keywords = '' }) {
             image: `https://koren.im${me}`
           })
         ]}
-      />
+      >
+        <script defer data-domain="koren.im" src="/analytics.js" />
+      </Helmet>
       <div
         css={{
           margin: '0 auto',

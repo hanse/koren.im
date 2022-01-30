@@ -36,11 +36,5 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-glamor`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-17229082-4'
-      }
-    }
   ]
 };
