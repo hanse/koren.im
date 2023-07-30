@@ -9,6 +9,7 @@ module.exports = {
     }
   },
   plugins: [
+    'gatsby-plugin-pnpm',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -35,6 +36,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-glamor`,
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet`
   ]
 };

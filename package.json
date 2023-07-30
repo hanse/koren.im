@@ -6,21 +6,20 @@
   "author": "Hans-Kristian Koren",
   "dependencies": {
     "gatsby": "^4.9.3",
-    "gatsby-image": "^3.11.0",
     "gatsby-link": "^4.9.1",
     "gatsby-plugin-glamor": "^3.11.0",
     "gatsby-plugin-google-analytics": "^4.9.0",
     "gatsby-plugin-image": "^2.9.1",
     "gatsby-plugin-react-helmet": "^5.9.0",
     "gatsby-plugin-sharp": "^4.9.1",
-    "gatsby-source-filesystem": "^4.9.1",
-    "gatsby-transformer-json": "^4.9.0",
-    "gatsby-transformer-sharp": "^4.9.0",
     "gatsby-remark-copy-linked-files": "^2.5.0",
     "gatsby-remark-images": "^3.6.0",
     "gatsby-remark-prismjs": "^3.8.0",
     "gatsby-remark-smartypants": "^2.5.0",
+    "gatsby-source-filesystem": "^4.9.1",
+    "gatsby-transformer-json": "^4.9.0",
     "gatsby-transformer-remark": "^2.11.1",
+    "gatsby-transformer-sharp": "^4.9.0",
     "glamor": "2.20.40",
     "prismjs": "^1.22.0",
     "react": "17.0.1",
@@ -42,6 +41,8 @@
     "arrowParens": "avoid"
   },
   "devDependencies": {
+    "gatsby-plugin-pnpm": "^1.2.10",
     "prettier": "^2.2.1"
-  }
+  },
+  "eslintConfig": {}
 }
