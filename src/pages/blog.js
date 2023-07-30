@@ -52,8 +52,8 @@ const styles = {
 export const query = graphql`
   query Query {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { eq: true } } }
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {published: {eq: true}}}
     ) {
       edges {
         node {
