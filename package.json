@@ -43,5 +43,10 @@
   "devDependencies": {
     "gatsby-plugin-pnpm": "^1.2.10",
     "prettier": "^3.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "gatsby"
+    ]
   }
 }
