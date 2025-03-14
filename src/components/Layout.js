@@ -13,19 +13,17 @@ const twitter = props =>
   }));
 
 function Layout({ children, title, description = '', keywords = '' }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            keywords
-            description
-          }
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          keywords
+          description
         }
       }
-    `
-  );
+    }
+  `);
 
   const metaDescription = description || site.siteMetadata.description;
   const metaKeywords = keywords || site.siteMetadata.keywords;
@@ -64,7 +62,11 @@ function Layout({ children, title, description = '', keywords = '' }) {
           })
         ]}
       >
-        <script defer data-domain="koren.im" src="/analytics.js" />
+        <script
+          defer
+          data-website-id="95b7f078-3112-426d-8a59-8458b19a7f6a"
+          src="/analytics.js"
+        />
       </Helmet>
       <div
         css={{
