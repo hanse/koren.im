@@ -62,6 +62,36 @@ function IndexPage() {
         </div>
 
         <section>
+          <div>
+            <h2 className="section-header">
+              <span>Stuff</span>
+            </h2>
+
+            <p>
+              <a href="https://snittfart.no" className="colorful">
+                Snittfart.no
+              </a>{' '}
+              &middot;{' '}
+              <a href="https://delemarked.no" className="colorful">
+                Delemarked.no
+              </a>{' '}
+              &middot;{' '}
+              <a href="https://citroen.koren.im" className="colorful">
+                Citro 80
+              </a>{' '}
+              &middot;{' '}
+              <a href="https://getninjagains.com" className="colorful">
+                Ninjagains
+              </a>{' '}
+              &middot;{' '}
+              <a href="https://weneedmorestuff.com" className="colorful">
+                We need more stuff 🥕
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <section>
           <h2 className="section-header">
             <span>Contact</span>
           </h2>
