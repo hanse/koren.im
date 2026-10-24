@@ -43,17 +43,5 @@
   "devDependencies": {
     "gatsby-plugin-pnpm": "^1.2.10",
     "prettier": "^3.5.3"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "core-js",
-      "core-js-pure",
-      "es5-ext",
-      "gatsby",
-      "gatsby-cli",
-      "msgpackr-extract",
-      "sharp"
-    ]
   }
 }
