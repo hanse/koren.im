@@ -95,13 +95,13 @@ function IndexPage() {
           <h2 className="section-header">
             <span>Contact</span>
           </h2>
-          I'm all over the internet, including{' '}
+          Find me on{' '}
           <a
             className="colorful"
             href="https://www.linkedin.com/in/hanskristiankoren/"
           >
             LinkedIn
-          </a>
+          </a>{' '}
           and{' '}
           <a className="colorful" href="https://github.com/hanse">
             GitHub
