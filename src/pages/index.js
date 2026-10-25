@@ -102,14 +102,6 @@ function IndexPage() {
           >
             LinkedIn
           </a>
-          ,{' '}
-          <a className="colorful" href="https://twitter.com/hanse">
-            Twitter
-          </a>
-          ,{' '}
-          <a className="colorful" href="https://keybase.io/hanse">
-            Keybase
-          </a>{' '}
           and{' '}
           <a className="colorful" href="https://github.com/hanse">
             GitHub

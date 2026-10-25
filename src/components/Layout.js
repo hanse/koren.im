@@ -6,11 +6,6 @@ import Helmet from 'react-helmet';
 import React from 'react';
 import me from '../me.png';
 
-const twitter = props =>
-  Object.entries({ card: 'summary', ...props }).map(([name, content]) => ({
-    name: `twitter:${name}`,
-    content
-  }));
 
 function Layout({ children, title, description = '', keywords = '' }) {
   const { site } = useStaticQuery(graphql`
@@ -54,12 +49,6 @@ function Layout({ children, title, description = '', keywords = '' }) {
             property: `og:type`,
             content: `website`
           },
-          ...twitter({
-            site: '@hanse',
-            title,
-            description,
-            image: `https://koren.im${me}`
-          })
         ]}
       >
         <script

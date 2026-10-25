@@ -4,9 +4,6 @@ module.exports = {
     description: "@hanse's web site",
     keywords:
       'react, react native, javascript, flow, consultant, devops, cloud, mobile apps',
-    social: {
-      twitter: 'hanse'
-    }
   },
   plugins: [
     'gatsby-plugin-pnpm',
