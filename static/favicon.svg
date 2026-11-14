@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <g id="hk">
+      <path d="M9 16h7v32H9zM23 16h7v32h-7zM9 28.5h21v7H9zM35 16h7v32h-7zM40 30 47.5 16H56l-9 17zM40 34l7-3.5L56 48h-8.5z"/>
+    </g>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#001f3f"/>
+  <g transform="rotate(-3 32 32)">
+    <use href="#hk" fill="#ed717e" y="3"/>
+    <use href="#hk" fill="#fff"/>
+  </g>
+</svg>
