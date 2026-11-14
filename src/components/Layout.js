@@ -51,6 +51,10 @@ function Layout({ children, title, description = '', keywords = '' }) {
           },
         ]}
       >
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#001f3f" />
         <script
           defer
           data-website-id="95b7f078-3112-426d-8a59-8458b19a7f6a"
